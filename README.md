@@ -1,5 +1,8 @@
 # SampleProject
 
+Homepage: Drew Davidson 
+
+
 OverView
 
 This project is a weather data website tailored for farmers, offering real-time and long-term weather forecasts, historical weather trends, and farm management tips. 
@@ -19,3 +22,4 @@ Mobile Optimization: Improve the interface for better mobile usability, allowing
 User Accounts: Enable user profiles to save locations, set weather alerts, and receive personalized recommendations.
 Advanced Visualizations: Add interactive charts and graphs for more in-depth data analysis.
 Enhanced API Integration: Incorporate multiple weather APIs for more detailed, localized weather data.
+

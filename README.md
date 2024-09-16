@@ -8,10 +8,10 @@ OverView
 This project is a weather data website tailored for farmers, offering real-time and long-term weather forecasts, historical weather trends, and farm management tips. 
 The website's core functionality includes a U.S. weather map that allows users to search by location and access data specific to their region. 
 The platform is designed to assist farmers in making informed decisions about crop management, planting, and harvesting by leveraging accurate, localized weather information.
-The homepage will have a quick search of for your location and give quick data for the week. 
-The historical page will show records by region with visual graphs or charts
-The seasonal page will show long term forcasts with monitoring of different data for farmers.
-The farm tips will allow users to show specific recommendations and other links.
+The homepage will have a quick search of for your location and give quick data for the week. -Drew
+The historical page will show records by region with visual graphs or charts -Joey
+The seasonal page will show long term forcasts with monitoring of different data for farmers. -Nathan
+The farm tips will allow users to show specific recommendations and other links. -Sami
 
 Current Phase: The project is in the initial development phase, where the core structure of the website is being built.
 Key features under development include the interactive weather map, a system for querying real-time and historical data, and basic visualizations for trends. 

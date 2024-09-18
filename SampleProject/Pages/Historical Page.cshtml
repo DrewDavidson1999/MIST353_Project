@@ -14,12 +14,6 @@
 
 <h2>Find Historical Data</h2>
 
-location: "42.3456, -89.4682",
-fields: ["temperature"],
-timesteps: ["1h"],
-startD: "2019-01-01 00:00:00Z",
-endD: "2024-01-01 00:00:00Z",
-units: "metric",
 
 <button onclick='generateWData()'>Generate Weather Data</button>
 
@@ -29,10 +23,8 @@ units: "metric",
 
 <scrpit>
 	funtion generateWData(){
-	Fetch(“https://api.tomrrow.io/v4/historical?apikey=Zop3wy3dPuRYSWC0k3Dr8QkiizHyCjvS)
-	.them((response) => response.json())
-	.them((response) => console.log(JSON.stringify(response, null, 2)))
-	.catch((err) => console.error(err));
+	
+	
 
 	}
 </scrpit>

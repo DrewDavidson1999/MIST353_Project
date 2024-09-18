@@ -2,25 +2,38 @@
 @model SampleProject.Pages.Historical_PageModel
 @{
 }
+
+<head>
 <h1>Historical Data</h1>
+</head>
+
 
 <br/>
 
+<body>
+
 <h2>Find Historical Data</h2>
 
-
+location: "42.3456, -89.4682",
+fields: ["temperature"],
+timesteps: ["1h"],
+startD: "2019-01-01 00:00:00Z",
+endD: "2024-01-01 00:00:00Z",
+units: "metric",
 
 <button onclick='generateWData()'>Generate Weather Data</button>
 
 <br/>
 
-
+</body>
 
 <scrpit>
 	funtion generateWData(){
-	Fetch('http://api.weatherapi.com/v1/current.json?key=d9da555a2ab14f0aa6d161907241809&q=new york&aqi=yes')
-		.them((response) => response.json())
-		.them((data) => console.img(data);
+	Fetch(“https://api.tomrrow.io/v4/historical?apikey=Zop3wy3dPuRYSWC0k3Dr8QkiizHyCjvS)
+	.them((response) => response.json())
+	.them((response) => console.log(JSON.stringify(response, null, 2)))
+	.catch((err) => console.error(err));
+
 	}
 </scrpit>
 

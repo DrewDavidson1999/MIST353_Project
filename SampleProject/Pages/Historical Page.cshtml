@@ -18,7 +18,7 @@
 
 <scrpit>
 	funtion generateWData(){
-		Fetch('https://www.visualcrossing.com/weather-api')
+	Fetch('http://api.weatherapi.com/v1/current.json?key=d9da555a2ab14f0aa6d161907241809&q=new york&aqi=yes')
 		.them((response) => response.json())
 		.them((data) => console.img(data);
 	}

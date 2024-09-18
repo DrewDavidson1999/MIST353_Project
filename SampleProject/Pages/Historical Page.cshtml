@@ -15,20 +15,25 @@
 <h2>Find Historical Data</h2>
 
 
-<button onclick='generateWData()'>Generate Weather Data</button>
+<button onclick="generateWData()">Generate Weather Data</button>
+
+<br/>
+<img id="chartImage" src="" width="500px" alt="Data Output" />
 
 <br/>
 
-</body>
-
 <scrpit>
-	funtion generateWData(){
-	
-	
-
+	funtion generateWData() {
+	fetch(“https://www.visualcrossing.com/weather-api”)
+	.then((response) => response.json())
+	.then((data) => {
+		const chartImage = document.getElementByID("chartImage");
+		chartImage.src = data[0];
+	}
+	.catch((error) => console.error(error));
 	}
 </scrpit>
-
+</body>
 
 
 

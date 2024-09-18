@@ -2,3 +2,28 @@
 @model SampleProject.Pages.Historical_PageModel
 @{
 }
+<h1>Historical Data</h1>
+
+<br/>
+
+<h2>Find Historical Data</h2>
+
+
+
+<button onclick='generateWData()'>Generate Weather Data</button>
+
+<br/>
+
+
+
+<scrpit>
+	funtion generateWData(){
+		Fetch('https://www.visualcrossing.com/weather-api')
+		.them((response) => response.json())
+		.them((data) => console.img(data);
+	}
+</scrpit>
+
+
+
+

@@ -16,7 +16,6 @@
 	}
 </style>
 
-
     <h2>Find Data</h2>
 
 	<button onclick="getdata()">Generate Data</button>
@@ -29,9 +28,9 @@
 	const response = await fetch(url);
 	const data = await response.json();
 	let forecast = data.hourly;
-		let text = "";
+	let text = "";
 	for (let hourForecast in forecast.temperature_2m) {
-				text += hourForecast;
+			text += hourForecast;
 	} 
 		
 

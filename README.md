@@ -20,7 +20,7 @@ User Accounts: Enable user profiles to save locations, set weather alerts, and r
 Advanced Visualizations: Add interactive charts and graphs for more in-depth data analysis.
 Enhanced API Integration: Incorporate multiple weather APIs for more detailed, localized weather data.
 
-Nathan Webpage Research http://farmerweather.com/ Farmer Weather has an interactive radar map that I would like to implement on my page. 
+Nathan Stryker Webpage Research http://farmerweather.com/ Farmer Weather has an interactive radar map that I would like to implement on my page. 
 I think having this on the page would definitely make the page look better. When creating a website like this, we are obviously 
 expecting people from all over the United States to use it, so having a radar map of the entire USA would allow for anyone anywhere to 
 quickly see radar for their area. After looking at the radar map, they would then be able to see the weather data for their specific state/region.

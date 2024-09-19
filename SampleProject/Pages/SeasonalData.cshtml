@@ -2,61 +2,101 @@
 @model SampleProject.Pages.SeasonalDataModel
 @{
     
-    <div class="header">
-        <h1><b>Seasonal Data</b></h1>
-    </div>
+        <div class="header">
+            <h1><b>Seasonal Data</b></h1>
+        </div>
 
-    <style>
-    .header{
-        color: black
-    }
-    h1, h3 {
-        text-align: center;
-    }
+        <style>
+        .header{
+            color: black
+        }
 
-    table{
-        border-collapse: collapse;
-        width:100%
-    }
+        h1, h3 {
+            text-align: center;
+        }
 
-    th, td {
-        border: 1px solid;
-        padding: 10px;
-        text-align: center;
-    }
-    </style>
+        table{
+            border-collapse: collapse;
+            width:100%
+        }
+        .showMidwestTable{
+            table-layout: center;
+        }
+        th, td {
+            border: 1px solid;
+            padding: 10px;
+            text-align: center;
+            color: forestgreen;
+            border-color: black;
 
-    <body
-        
-          background="https://wallpaperaccess.com/full/1659982.jpg"
-          style="background-repeat: no-repeat;">
-          <h3>Midwest</h3>
-          <table>
-          <tr>
-            <th>Season</th>
-            <th>Avg Regional Temp</th>
-            <th>Suggested Crops</th>
-          </tr>
-          <tr>
-            <td>Winter</td>
-            <td>15 F</td>
-            <td>Leafy greens, Broccoli, Cauliflower, Beets, Carrots </td>
-          </tr>
-          </table>
-        <h3>West</h3>
-        <table>
-            <tr>
+        }
+        </style>
+
+        <body
+            
+              background="https://wallpaperaccess.com/full/1659982.jpg"
+              style="background-repeat: no-repeat;">
+            <div class="weather-container">
+                <h2>Select Your Region</h2>
+
+                <div class="display-region-buttons">
+                    <div class="region-buttons">
+                    <button onclick="showWestTable()" id="WestBtn">West</button>
+                    <button onclick="showMidwestTable()" id="MidwestBtn">Midwest</button>
+                    </div>
+                </div>
+
+            <div id="MidwestHeader"><h3>Midwest</h3></div>
+              <table id="MidwestTable" clas>
+              <tr>
                 <th>Season</th>
                 <th>Avg Regional Temp</th>
                 <th>Suggested Crops</th>
-            </tr>
-            <tr>
-                <td>Summer</td>
-                <td>75-79 F</td>
-                <td>Cucumbers, Peppers, Watermelons, Carrots, Corn, Muskmelons</td>
-            </tr>
-        </table>
-        </body>
+              </tr>
+              <tr>
+                <td>Winter</td>
+                <td>15 F</td>
+                    <td > Leafy greens, Broccoli, Cauliflower, Beets, Carrots </td >
+              </tr>
+              </table>
+            <div id="WestHeader"><h3>West</h3></div>
+            <table id="WestTable">
+                <tr>
+                    <th>Season</th>
+                    <th>Avg Regional Temp</th>
+                    <th>Suggested Crops</th>
+                </tr>
+                <tr>
+                    <td>Summer</td>
+                    <td>75-79 F</td>
+                    <td>Cucumbers, Peppers, Watermelons, Carrots, Corn, Muskmelons</td>
+                </tr>
+            </table>
+           
+            <script>
+              
+                function showMidwestTable() {
+                    
+                        document.getElementById("MidwestTable").style.display = "block";
+                        document.getElementById("MidwestHeader").style.display = "block";
+                        document.getElementById("WestTable").style.display = "none";
+                        document.getElementById("WestHeader").style.display = "none";
+
+                     }
+                    function showWestTable() {
+                        document.getElementById("WestTable").style.display = "block";
+                        document.getElementById("WestHeader").style.display = "block";
+                        document.getElementById("MidwestTable").style.display = "none";
+                         document.getElementById("MidwestHeader").style.display = "none";
+                    }
+               
+                
+
+
+
+
+            </script>
+            </body>
 
 
 

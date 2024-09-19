@@ -2,91 +2,75 @@
 @model SampleProject.Pages.WeatherDataHomePageModel
 @{
 }
-
-
-<div class="header">
-    <h1><b>Weather for Farmers</b></h1>
-</div>
-
-
-<body background="https://ten-four.com/wp-content/uploads/2020/01/iStock-937010674crop-2048x781.jpg"
-          style="background-repeat: no-repeat;"></body>
-
-
-<h2 style="color:white;background-color:seagreen;font-family:'Times New Roman';text-align:center; font-size:38px">
-    Search for weather conditions below!</h2>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
-<body>
-    <div class="card">
-        <div class="search">
-            <input type="text" class="search-bar" placeholder="Search">
-            <button>
-                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1.5em"
-                     width="1.5em" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z">
-                    </path>
-                    <button type="button" class="btn btn-primary">Default</button>
+<body background="https://ten-four.com/wp-content/uploads/2020/01/iStock-937010674crop-2048x781.jpg"
+      style="background-repeat: no-repeat; background-size:cover;">
+    <div class="header text-center">
+        <h1><b>Weather for Farmers</b></h1>
+    </div>
 
-                </svg>
-            </button>
+    <h2 style="color:white;background-color:seagreen;font-family:'Times New Roman';text-align:center; font-size:38px">
+        Search for weather conditions below!
+    </h2>
+
+    <div class="search-container">
+        <div class="card">
+            <form id="weather-form">
+                <div class="searchbar">
+                    <input type="text" class="form-control" id="search-bar" placeholder="Enter City Name" aria-label="City Name" aria-describedby="button-search">
+                    <button class="btn btn-outline-secondary" type="submit" id="button-search">Search</button>
+                </div>
+            </form>
         </div>
-        <div class="weather loading">
-            <h2 class="city">Weather in Denver</h2>
-            <h1 class="temp">51°C</h1>
+
+        <div id="weather-display" class="card">
+            <h1 class="city">Weather in Dallas</h1>
+            <h2 class="temp">73°F</h2>
             <div class="flex">
                 <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
-                <div class="description"> Slightly Cloudy</div>
+                <div class="description">Slightly Cloudy</div>
             </div>
-            <div class="humidity">Humidity: 50%</div>
-            <div class="wind">Wind speed: 5.2 km/h</div>
+            <div class="humidity">Humidity: 15%</div>
+            <div class="wind">Wind speed: 3.2 km/h</div>
         </div>
     </div>
-</body>
-<script>
-    const x = document.getElementById("location");
 
-    function getLocation() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-        } else {
-            x.innerHTML = "Geolocation is not supported by this browser.";
-        }
-    }
+    <div class="container">
+        <h5 style="font-size: 22px; color: yellow;">Find your location</h5>
+        <p style="font-size: 22px; color: yellow;">Click here to get your coordinates:</p>        
+        <button class="btn btn-primary" onclick="getLocation()">Get your location</button>
+        <p id="location" style="font-size: 22px; color: yellow;"></p>
+    </div>
 
-    function showPosition(position) {
-        x.innerHTML = "Latitude: " + position.coords.latitude +
-            "<br>Longitude: " + position.coords.longitude;
-    }
-</script>
-<h5>Find your location</h5>
-<p>Click here to get your coordinates.</p>
-
-<button onclick="getLocation()">Get your location</button>
-
-<p id="location"></p>
-
-<body>
     <script>
-        const x = document.getElementById("location");
+        document.getElementById("weather-form").addEventListener("submit", function (event) {
+            event.preventDefault(); 
+            const city = document.getElementById("search-bar").value;
+            alert("You searched for: " + city); 
+            
+        });
+
+        
+        const locationDisplay = document.getElementById("location");
 
         function getLocation() {
             if (navigator.geolocation) {
-                navigator.geolocation.watchPosition(showPosition);
+                navigator.geolocation.getCurrentPosition(showPosition);
             } else {
-                x.innerHTML = "Geolocation is not supported by this browser.";
+                locationDisplay.innerHTML = "Geolocation is not supported by this browser.";
             }
         }
 
         function showPosition(position) {
-            x.innerHTML = "Latitude: " + position.coords.latitude +
+            locationDisplay.innerHTML = "Latitude: " + position.coords.latitude +
                 "<br>Longitude: " + position.coords.longitude;
         }
     </script>
-
 </body>

@@ -10,7 +10,7 @@ The website's core functionality includes a U.S. weather map that allows users t
 The platform is designed to assist farmers in making informed decisions about crop management, planting, and harvesting by leveraging accurate, localized weather information.
 The homepage will have a quick search of for your location and give quick data for the week. -Drew
 The historical page will show records by region with visual graphs or charts -Joey
-The seasonal page will show long term forcasts with monitoring of different data for farmers. -Nathan
+The seasonal page will show long term forecasts with monitoring of different data for farmers. -Nathan
 The farm tips will allow users to show specific recommendations and other links. -Sami
 
 Current Phase: The project is in the initial development phase, where the core structure of the website is being built.
@@ -23,3 +23,8 @@ User Accounts: Enable user profiles to save locations, set weather alerts, and r
 Advanced Visualizations: Add interactive charts and graphs for more in-depth data analysis.
 Enhanced API Integration: Incorporate multiple weather APIs for more detailed, localized weather data.
 
+Nathan Webpage Research
+http://farmerweather.com/
+Farmer Weather has an interactive radar map that I would like to implement on my page. I think having this on the page would definitely make the page look better.
+When creating a website like this, we are obviously expecting people from all over the United States to use it, so having a radar map of the entire USA would allow for anyone anywhere to quickly see radar for their area.
+After looking at the radar map, they would then be able to see the weather data for their specific state/region. 

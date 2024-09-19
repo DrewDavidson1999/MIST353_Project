@@ -29,10 +29,12 @@
 	const response = await fetch(url);
 	const data = await response.json();
 	let forecast = data.hourly;
-	let text = "";
+		let text = "";
 	for (let hourForecast in forecast.temperature_2m) {
-				text += hourForecast;		
-	}
+				text += hourForecast;
+	} 
+		
+
 	document.getElementById("myTable").innerHTML = text;
 }
 </script>

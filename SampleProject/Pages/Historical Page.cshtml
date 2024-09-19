@@ -18,10 +18,6 @@
 			background-size: cover;
         }
 	</style> 
-
-
-	
-
 <br/>
 
 <body>
@@ -45,11 +41,9 @@
 			const tableHead = document.createElement('thead');
 			const tableBody = document.createElement('tbody');
 
-			// Append the table head and body to table
 			table.appendChild(tableHead);
 			table.appendChild(tableBody);
 
-			// Creating table head
 			let row = tableHead.insertRow();
 			Object.keys(data[0]).forEach(key => {
 				let th = document.createElement('th');
@@ -57,7 +51,6 @@
 				row.appendChild(th);
 			});
 
-			// Creating table body
 			data.forEach(item => {
 				let row = tableBody.insertRow();
 				Object.values(item).forEach(value => {
@@ -66,9 +59,11 @@
 				});
 			});
 
-			// Append the table to the HTML document
 			document.getElementById('yourElementId').appendChild(table);
 		}
+		document.createElement()
+
+
 				table {
 			width: 100 %;
 			border - collapse: collapse;

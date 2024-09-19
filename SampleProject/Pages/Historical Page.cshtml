@@ -4,80 +4,37 @@
 }
 
 
-
-<head>
 <h1 align="Center">Historical Data</h1>
 
-</head>
 
-	<style>
-		body{
-			background-image: url("https://c8.alamy.com/comp/G3F497/canada-maritime-provinces-old-fashioned-farm-new-brunswick-old-print-G3F497.jpg");
-			background-repeat: no-repeat;
-			background-attachment: fixed;
-			background-size: cover;
-        }
-	</style> 
-<br/>
+<style>
+    background-image: url("https://c8.alamy.com/comp/G3F497/canada-maritime-provinces-old-fashioned-farm-new-brunswick-old-print-G3F497.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+</style>
 
-<body>
 
     <h2>Find Data</h2>
 
 	<button onclick="getdata()">Generate Data</button>
 
-	
+    <div id='myTable'></div>
 
-	<script>
-		<div>id='myTable'</div>
-
-		funtion getdata(){
-			fetch('https://archive-api.open-meteo.com/v1/era5?latitude=52.52&longitude=13.41&start_date=2021-01-01&end_date=2021-12-31&hourly=temperature_2m')
-				.then((response) => response.json)
-				.then((data) => createTable(data.weather))
-				.catch (error => console.error('Error:', error));
-		}
-		
-		function createTable(data) {
-			const table = document.createElement('table');
-			const tableHead = document.createElement('thead');
-			const tableBody = document.createElement('tbody');
-
-			table.appendChild(tableHead);
-			table.appendChild(tableBody);
-
-			let row = tableHead.insertRow();
-			Object.keys(data[0]).forEach(key => {
-				let th = document.createElement('th');
-				th.textContent = key.toUpperCase();
-				row.appendChild(th);
-			});
-
-			data.forEach(item => {
-				let row = tableBody.insertRow();
-				Object.values(item).forEach(value => {
-					let cell = row.insertCell();
-					cell.textContent = value;
-				});
-			});
-
-			document.getElementById('myTable').appendChild(table);
-		}
-		document.createElement()
+<script>
+	async function getdata() {
+	let url = 'https://archive-api.open-meteo.com/v1/era5?latitude=52.52&longitude=13.41&start_date=2021-01-01&end_date=2021-12-31&hourly=temperature_2m';
+	const response = await fetch(url);
+	const data = await response.json();
+	let forecast = data.hourly;
+	let text = "";
+	for (let hourForecast in forecast.temperature_2m) {
+				text += hourForecast;		
+	}
+	document.getElementById("myTable").innerHTML = text;
+}
+</script>
 
 
-				table {
-			width: 100 %;
-			border - collapse: collapse;
-		}
-
-		th, td {
-			padding: 8px;
-			text - align: left;
-			border - bottom: 1px solid #ddd;
-		}
-	</script>
-
-</body>
 
 

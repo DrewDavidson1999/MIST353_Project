@@ -45,19 +45,19 @@ a soft color palette and subtle shadow effects to create a welcoming atmosphere.
 
 
 Drew Davidson 
-Documenting Individual Contributions:
+**Documenting Individual Contributions:**
 I created the WeatherDataHomePage.cshtml page of our prototype. For my WeatherDataHomePage I implemented a backround image for the web page based off farm landscape. Following I created a bold header for the top of the page reading "Weather for Farmers".
 Directly below my first header I added a second header with text directing the user to "Search for weather conditions below!", I added a seagreen backround to the text. Next I added a card to hold the search bar for users to search for weather by their city name.
 Next I added a card to hold hypothetical weather data from a certain location, in the future the goal is to have the user find their current location when accessing website, then the weather data will autoload into this card. 
 Next I added a "find my location" button for the user to find their current location based of longitude and latitude, I am still trying to attempt to have the location of the user displayed by name of their city. I made the all the text yellow pertaining to the get your location button.
 
-Research and Findings:
+**Research and Findings:**
 For this project I researched multiple repositories, I found ways to implement search bars that look more aestheticly pleasing, instead of carrying a 90's look. As well make the button for the searh bar to have a cleaner design.
 Additionally I found a method to implement the "get your location" feature. This is to fetch the users current location, I was only able to find examples of cordinate locations, I am still working on getting location to appear as a city. 
 Reguarding researching a website I chose a weather data based website, during inspecting the HTML code of this website I learned a lot of useful information. First I found a section of HTML code for making a hamburger menu, and implemeting 
 list items into the menu utilizing href to direct the user to other pages of the site. Additionally I discovered how to utilize the logo theme of a website as a list item with a correlated theme hyperlink to redirect the user to the home screen. 
 
-Reflection on Resources:
+**Reflection on Resources:**
 For this assignment the resources that I used included Github repositories, W3Schools, ChatGPT, and inspecting website for their HTML code. I found inspecting websites and GitHub repositories to be the most helpful resource 
 during this assignment. I feel inspecting a website is one of the most beneficial ways to learn HTML, following along with the code displayed and the layout of the website. I did not use ChatGPT to write me code from scratch, 
 I feel that ChatGPT has flawed methods of coding that results in errors. I did use ChatGPT to help me revise code that I had, such as look for errors or revise code that was not working correctly. 

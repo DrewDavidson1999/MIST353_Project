@@ -7,8 +7,8 @@ The website's core functionality includes a U.S. weather map that allows users t
 The platform is designed to assist farmers in making informed decisions about crop management, planting, and harvesting by leveraging accurate, localized weather information.
 The homepage will have a quick search of for your location and give quick data for the week. -Drew
 The historical page will show records by region with visual graphs or charts -Joey
-The seasonal page will show long term forcasts with monitoring of different data for farmers. -Nathan
-The farm tips will allow users to show specific recommendations and other links. -Sami
+The seasonal page will show long term forecasts with monitoring of different data for farmers. -Nathan
+The farm tips will allow users to show specific recommendations and other tips. -Sami
 
 Current Phase: The project is in the initial development phase, where the core structure of the website is being built.
 Key features under development include the interactive weather map, a system for querying real-time and historical data, and basic visualizations for trends. 
@@ -20,21 +20,31 @@ User Accounts: Enable user profiles to save locations, set weather alerts, and r
 Advanced Visualizations: Add interactive charts and graphs for more in-depth data analysis.
 Enhanced API Integration: Incorporate multiple weather APIs for more detailed, localized weather data.
 
-**Drew Davidson**
-Assignment 2:
-	
-**Competitive Analysis**: 
-For my competitive analysis I analyzed the website OpenWeather (openweathermap.org/). Upon inspecting the website I found the HTML code for the implementation of a hamburger menu. 
-First by creating a list item with the ID set to hamburger (<li id=”hamburger”>). Following sourcing the image for the hamburger menu (<img src = “link” alt = “icon hamburger”>. 
-I found very useful HTML code to help me understand how to format a menu. The HTML code used to link a website and or specific page to a list item in building the menu was specifically redirecting users to other pages of their website. 
-Often instead of using the whole URL for the hyperlink, the developer used for example, “/guide or /API”. The logo of the website is referenced as a hyperlink to reverent the user back to the home screen. 
-When clicking on the logo instead of referencing a specific page of the website it references the source of the logo image.
+Nathan Webpage Research http://farmerweather.com/ Farmer Weather has an interactive radar map that I would like to implement on my page. 
+I think having this on the page would definitely make the page look better. When creating a website like this, we are obviously 
+expecting people from all over the United States to use it, so having a radar map of the entire USA would allow for anyone anywhere to 
+quickly see radar for their area. After looking at the radar map, they would then be able to see the weather data for their specific state/region.
 
-**GitHub Repository Research**:
-For my repository research I analyzed the GitHub repository (github.com/BondeYash), who created a similar weather application. One key takeaway from his repository is his HTML code to implement a drop down window. 
-This is a great concept for my group to add to our project, to help navigate through different pages of our application. Another area of code that I found interesting is creating card classes to display different categories of weather, such as wind, temperature, and humanity information. 
-My group could use this idea to implement weather cards that display with such information, after the user searches for their location of interest. Upon researching different GitHub repositories for similar concepts to my group's weather application, it was difficult to find a detailed README.md file. 
+Samantha Wilson Webpage Research Farms.com is a practical website designed for agricultural professionals, offering weather forecasts 
+and farming advice in a user-friendly format. The site uses a clean layout with easy navigation, featuring weather tools that provide location-based 
+forecasts and alerts. It integrates Bootstrap components for a responsive design, though it remains simple in functionality without advanced frontend frameworks. 
+The focus is on providing essential resources, such as crop management tips and custom weather alerts, which makes it well-suited for its target audience of farmers looking to optimize their operations based on weather conditions.
 
+GitHub Repository Research The Farm-AI GitHub repository is a mobile application designed to support farmers by providing real-time 
+weather updates and farm management tips. The app integrates a weather API to offer tailored forecasts, rain predictions, and crop 
+recommendations based on the specific climate and location of a farm. Additionally, it includes educational resources on farming 
+techniques and crop care. The README is well-structured, clearly outlining the app’s features, technologies used, and how users can 
+access and contribute to the project. It provides detailed insights into how machine learning is used for predictions, making the repository 
+an excellent resource for those interested in combining weather data with agricultural advice.
+
+Webpage The Farm Tips page is a modern and user-friendly web application designed to provide useful agricultural advice in a clean and 
+visually appealing format. It features a simple layout centered on the screen, enhancing readability and accessibility. The page includes a 
+table displaying various farming tips along with their respective categories, allowing users to quickly identify relevant information. A 
+prominent button invites users to receive a random tip, which is displayed in a bold, eye-catching format below the button. The design uses 
+a soft color palette and subtle shadow effects to create a welcoming atmosphere.
+
+
+Drew Davidson 
 **Documenting Individual Contributions**
 I created the WeatherDataHomePage.cshtml page of our prototype. For my WeatherDataHomePage I implemented a backround image for the web page based off farm landscape. Following I created a bold header for the top of the page reading "Weather for Farmers".
 Directly below my <h1> I added a second header with text directing the user to "Search for weather conditions below!", I added a seagreen backround to the text. Next I added a card to hold the search bar for users to search for weather by their city name.

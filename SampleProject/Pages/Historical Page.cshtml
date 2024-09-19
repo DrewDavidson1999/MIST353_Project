@@ -26,13 +26,15 @@
 
 	<button onclick="getdata()">Generate Data</button>
 
+	
+
 	<script>
+		<div>id='myTable'</div>
+
 		funtion getdata(){
 			fetch('https://archive-api.open-meteo.com/v1/era5?latitude=52.52&longitude=13.41&start_date=2021-01-01&end_date=2021-12-31&hourly=temperature_2m')
 				.then((response) => response.json)
 				.then((data) => createTable(data.weather))
-
-				
 				.catch (error => console.error('Error:', error));
 		}
 		
@@ -59,7 +61,7 @@
 				});
 			});
 
-			document.getElementById('yourElementId').appendChild(table);
+			document.getElementById('myTable').appendChild(table);
 		}
 		document.createElement()
 
@@ -75,8 +77,6 @@
 			border - bottom: 1px solid #ddd;
 		}
 	</script>
-
-
 
 </body>
 

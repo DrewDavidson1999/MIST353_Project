@@ -1,0 +1,131 @@
+﻿@page
+@model SampleProject.Pages.FarmTipsModel
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+            button:hover {
+                background-color: #218838;
+            }
+
+        #randomTip {
+            font-size: 18px;
+            color: #555;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Farm Tips</h1>
+        <p>Below are some tips to help optimize your farming operations:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Tip</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Plant cover crops to protect soil during off-seasons.</td>
+                    <td>Soil Health</td>
+                </tr>
+                <tr>
+                    <td>Use weather forecasts to schedule irrigation and planting.</td>
+                    <td>Water Management</td>
+                </tr>
+                <tr>
+                    <td>Incorporate organic fertilizers to improve crop yield.</td>
+                    <td>Crop Management</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button id="tipButton">Get Random Tip</button>
+        <p id="randomTip"></p>
+    </div>
+
+    <script>
+        document.getElementById('tipButton').addEventListener('click', function () {
+            const tips = [
+                'Rotate crops to improve soil health and reduce pests.',
+                'Use drip irrigation to conserve water and enhance efficiency.',
+                'Test soil regularly to determine nutrient needs and fertilizer usage.',
+                'Time planting based on forecasted rain for natural irrigation.'
+            ];
+
+            const randomIndex = Math.floor(Math.random() * tips.length);
+            const randomTip = tips[randomIndex];
+
+            document.getElementById('randomTip').innerText = randomTip;
+        });
+    </script>
+
+</body>
+</html>

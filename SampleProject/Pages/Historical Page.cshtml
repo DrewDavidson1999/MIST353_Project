@@ -4,35 +4,37 @@
 }
 
 
-
-<head>
 <h1 align="Center">Historical Data</h1>
 
-</head>
 
-	<style>
-		body{
-			background-image: url("https://c8.alamy.com/comp/G3F497/canada-maritime-provinces-old-fashioned-farm-new-brunswick-old-print-G3F497.jpg");
-			background-repeat: no-repeat;
-			background-attachment: fixed;
-			background-size: cover;
-        }
-	</style> 
+<style>
+    background-image: url("https://c8.alamy.com/comp/G3F497/canada-maritime-provinces-old-fashioned-farm-new-brunswick-old-print-G3F497.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+</style>
 
 
-	
+    <h2>Find Data</h2>
 
-<br/>
+	<button onclick="getdata()">Generate Data</button>
 
-<body>
+    <div id='myTable'></div>
 
-<h2>Find Data</h2>
+<script>
+	async function getdata() {
+	let url = 'https://archive-api.open-meteo.com/v1/era5?latitude=52.52&longitude=13.41&start_date=2021-01-01&end_date=2021-12-31&hourly=temperature_2m';
+	const response = await fetch(url);
+	const data = await response.json();
+	let forecast = data.hourly;
+	let text = "";
+	for (let hourForecast in forecast.temperature_2m) {
+				text += hourForecast;		
+	}
+	document.getElementById("myTable").innerHTML = text;
+}
+</script>
 
-   
 
-
-
-
-</body>
 
 

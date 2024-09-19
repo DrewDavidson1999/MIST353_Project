@@ -66,3 +66,15 @@ W3Schools was very helpful in understanding core HTML concepts, format, and find
 GitHub Repository Resources Used: (https://github.com/Akuien/SimpleWeatherApp/blob/main/index.html) (https://github.com/shivang21007/Weather-forcast/blob/main/index.html)
 Website Inspected: (https://openweathermap.org/)
 Other Resources: (ChatGPT.com) (W3Schools.com)
+
+Joey Baumgart Individual Contributions: Created a webpage with titles and a background, used an API to gather data, and used a button to display the data from the API. Added to the readme and did website and repository research.
+
+This website has historical data and provides a useful API. The API collects several useful variables relating to temperature and climate. This API is the one I am implementing into my web page since it gives good results back.
+https://open-meteo.com/
+
+This is GitHub repository contains data sets and APIs related to weather and climate change. The APIs can be used for data in multiple climate fields. The ReadMe lists several APIs to use and their descriptions of what they are and how they can be used.
+https://github.com/KKulma/climate-change-data
+
+For this assignment I used w3schools and the class repository to look at and implement code. I did not use ChatGPT at all. I also used the open API I found and postman to generate the API.
+
+

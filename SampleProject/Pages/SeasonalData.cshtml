@@ -2,101 +2,170 @@
 @model SampleProject.Pages.SeasonalDataModel
 @{
     
-        <div class="header">
-            <h1><b>Seasonal Data</b></h1>
-        </div>
-
-        <style>
-        .header{
-            color: black
-        }
-
-        h1, h3 {
-            text-align: center;
-        }
-
-        table{
-            border-collapse: collapse;
-            width:100%
-        }
-        .showMidwestTable{
-            table-layout: center;
-        }
-        th, td {
-            border: 1px solid;
-            padding: 10px;
-            text-align: center;
-            color: forestgreen;
-            border-color: black;
-
-        }
-        </style>
-
-        <body
-            
-              background="https://wallpaperaccess.com/full/1659982.jpg"
-              style="background-repeat: no-repeat;">
-            <div class="weather-container">
-                <h2>Select Your Region</h2>
-
-                <div class="display-region-buttons">
-                    <div class="region-buttons">
-                    <button onclick="showWestTable()" id="WestBtn">West</button>
-                    <button onclick="showMidwestTable()" id="MidwestBtn">Midwest</button>
+                    <div class="header">
+                        <h1><b>Seasonal Data</b></h1>
                     </div>
-                </div>
 
-            <div id="MidwestHeader"><h3>Midwest</h3></div>
-              <table id="MidwestTable" clas>
-              <tr>
-                <th>Season</th>
-                <th>Avg Regional Temp</th>
-                <th>Suggested Crops</th>
-              </tr>
-              <tr>
-                <td>Winter</td>
-                <td>15 F</td>
-                    <td > Leafy greens, Broccoli, Cauliflower, Beets, Carrots </td >
-              </tr>
-              </table>
-            <div id="WestHeader"><h3>West</h3></div>
-            <table id="WestTable">
-                <tr>
-                    <th>Season</th>
-                    <th>Avg Regional Temp</th>
-                    <th>Suggested Crops</th>
-                </tr>
-                <tr>
-                    <td>Summer</td>
-                    <td>75-79 F</td>
-                    <td>Cucumbers, Peppers, Watermelons, Carrots, Corn, Muskmelons</td>
-                </tr>
-            </table>
-           
-            <script>
-              
-                function showMidwestTable() {
-                    
-                        document.getElementById("MidwestTable").style.display = "block";
-                        document.getElementById("MidwestHeader").style.display = "block";
-                        document.getElementById("WestTable").style.display = "none";
-                        document.getElementById("WestHeader").style.display = "none";
-
-                     }
-                    function showWestTable() {
-                        document.getElementById("WestTable").style.display = "block";
-                        document.getElementById("WestHeader").style.display = "block";
-                        document.getElementById("MidwestTable").style.display = "none";
-                         document.getElementById("MidwestHeader").style.display = "none";
+                    <style>
+                    .header{
+                        color: black
                     }
-               
-                
+
+                    h1, h3 {
+                        text-align: center;
+                    }
+
+                    table{
+                        border-collapse: collapse;
+                        width:100%
+                    }
+                    .showMidwestTable{
+                        table-layout: center;
+                    }
+                    th, td {
+                        border: 1px solid;
+                        padding: 10px;
+                        text-align: center;
+                        color: forestgreen;
+                        border-color: black;
+
+                    }
+                    </style>
+
+                    <body
+                        
+                          background="https://wallpaperaccess.com/full/1659982.jpg"
+                          style="background-repeat: no-repeat;">
+                        <div class="weather-container">
+                            <h2>Select Your Region</h2>
+
+                            <div class="display-region-buttons">
+                                <div class="region-buttons">
+                                <button onclick="showAllTables()" id="AllBtn">Show All Regions</button>
+                                <button onclick="showWestTable()" id="WestBtn">West</button>
+                                <button onclick="showMidwestTable()" id="MidwestBtn">Midwest</button>
+                                <button onclick="showSouthTable()" id="SouthBtn">South</button>
+                                <button onclick="showNortheastTable()" id="NortheastBtn">Northeast</button>
+                                </div>
+                            </div>
+
+                        <div id="MidwestHeader"><h3><b>Midwest</b></h3></div>
+                          <table id="MidwestTable">
+                          <tr>
+                            <th>Season</th>
+                            <th>Avg Regional Temp</th>
+                            <th>Suggested Crops</th>
+                          </tr>
+                          <tr>
+                            <td>Winter</td>
+                            <td>15 F</td>
+                                <td > Leafy greens, Broccoli, Cauliflower, Beets, Carrots </td >
+                          </tr>
+                          </table>
+                        <div id="WestHeader"><h3><b>West</b></h3></div>
+                        <table id="WestTable">
+                            <tr>
+                                <th>Season</th>
+                                <th>Avg Regional Temp</th>
+                                <th>Suggested Crops</th>
+                            </tr>
+                            <tr>
+                                <td>Summer</td>
+                                <td>75-79 F</td>
+                                <td>Cucumbers, Peppers, Watermelons, Carrots, Corn, Muskmelons</td>
+                            </tr>
+                        </table>
+
+                        <div id="SouthHeader"><h3><b>South</b></h3></div>
+                        <table id="SouthTable">
+                            <tr>
+                                <th>Season</th>
+                                <th>Avg Regional Temp</th>
+                                <th>Suggested Crops</th>
+                            </tr>
+                            <tr>
+                                <td>Fall</td>
+                                <td>Widely varies, but generally between 55 and 65 F</td>
+                                <td>Carrots, Leafy greens, Radishes, Broccoli, Peas</td>
+                            </tr>
+                        </table>
+
+                        <div id="NortheastHeader"><h3><b>Northeast</b></h3></div>
+                        <table id="NortheastTable">
+                            <tr>
+                                <th>Season</th>
+                                <th>Avg Regional Temp</th>
+                                <th>Suggested Crops</th>
+                            </tr>
+                            <tr>
+                                <td>Spring</td>
+                                <td>49 F</td>
+                                <td>Leafy greens, Radishes, Broccoli, Kohlrabi</td>
+                            </tr>
+                        </table>
+                        <script>
+                          
+                            function showMidwestTable() {
+                                
+                                    document.getElementById("MidwestTable").style.display = "block";
+                                    document.getElementById("MidwestHeader").style.display = "block";
+                                    document.getElementById("WestTable").style.display = "none";
+                                    document.getElementById("WestHeader").style.display = "none";
+                                    document.getElementById("SouthTable").style.display = "none";
+                                    document.getElementById("SouthHeader").style.display = "none";
+                                    document.getElementById("NortheastTable").style.display = "none";
+                                    document.getElementById("NortheastHeader").style.display = "none";
+
+                                 }
+                                function showWestTable() {
+                                    document.getElementById("WestTable").style.display = "block";
+                                    document.getElementById("WestHeader").style.display = "block";
+                                    document.getElementById("MidwestTable").style.display = "none";
+                                    document.getElementById("MidwestHeader").style.display = "none";
+                                    document.getElementById("SouthTable").style.display = "none";
+                                    document.getElementById("SouthHeader").style.display = "none";
+                                    document.getElementById("NortheastTable").style.display = "none";
+                                    document.getElementById("NortheastHeader").style.display = "none";
+                                }
+                                function showSouthTable() {
+                                    document.getElementById("SouthTable").style.display = "block";
+                                    document.getElementById("SouthHeader").style.display = "block";
+                                    document.getElementById("MidwestTable").style.display = "none";
+                                    document.getElementById("MidwestHeader").style.display = "none";
+                                    document.getElementById("WestTable").style.display = "none";
+                                    document.getElementById("WestHeader").style.display = "none";
+                                    document.getElementById("NortheastTable").style.display = "none";
+                                    document.getElementById("NortheastHeader").style.display = "none";
+                            }
+                            function showNortheastTable() {
+                                    document.getElementById("NortheastTable").style.display = "block";
+                                    document.getElementById("NortheastHeader").style.display = "block";
+                                    document.getElementById("SouthTable").style.display = "none";
+                                    document.getElementById("SouthHeader").style.display = "none";
+                                    document.getElementById("MidwestTable").style.display = "none";
+                                    document.getElementById("MidwestHeader").style.display = "none";
+                                    document.getElementById("WestTable").style.display = "none";
+                                    document.getElementById("WestHeader").style.display = "none";
+                            }
+
+                            function showAllTables() {
+                                    document.getElementById("NortheastTable").style.display = "block";
+                                    document.getElementById("NortheastHeader").style.display = "block";
+                                    document.getElementById("SouthTable").style.display = "block";
+                                    document.getElementById("SouthHeader").style.display = "block";
+                                    document.getElementById("MidwestTable").style.display = "block";
+                                    document.getElementById("MidwestHeader").style.display = "block";
+                                    document.getElementById("WestTable").style.display = "block";
+                                    document.getElementById("WestHeader").style.display = "block";
+                            }
 
 
 
 
-            </script>
-            </body>
+
+
+                        </script>
+                        </body>
 
 
 

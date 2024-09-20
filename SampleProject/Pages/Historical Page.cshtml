@@ -14,28 +14,65 @@
         background-attachment: fixed;
         background-size: cover;
 	}
+
+	#myTable {
+		border-collapse: collapse;
+		width: 100%;
+	}
+
+	th, td {
+		border: 1px solid #ddd;
+		padding: 8px;
+		text-align: left;
+		background-color: white;
+	}
+
+	th {
+		background-color: #f2f2f2;
+	}
 </style>
 
     <h2>Find Data</h2>
 
 	<button onclick="getdata()">Generate Data</button>
 
-    <div id='myTable'></div>
+<table id="myTable">
+	<thead>
+		<tr>
+			<th>Time</th>
+			<th>Temperature (°C)</th>
+		</tr>
+	</thead>
+	<tbody>
+	</tbody>
+</table>
 
 <script>
 	async function getdata() {
-	let url = 'https://archive-api.open-meteo.com/v1/era5?latitude=52.52&longitude=13.41&start_date=2021-01-01&end_date=2021-12-31&hourly=temperature_2m';
-	const response = await fetch(url);
-	const data = await response.json();
-	let forecast = data.hourly;
-	let text = "";
-	for (let hourForecast in forecast.temperature_2m) {
-			text += hourForecast;
-	} 
-		
+		let url = 'https://archive-api.open-meteo.com/v1/era5?latitude=52.52&longitude=13.41&start_date=2021-01-01&end_date=2021-12-31&hourly=temperature_2m';
+		const response = await fetch(url);
+		const data = await response.json();
+		let forecast = data.hourly;
 
-	document.getElementById("myTable").innerHTML = text;
-}
+		const table = document.getElementById("myTable");
+		const tbody = table.querySelector("tbody");
+
+		forecast.time.forEach((time, index) => {
+			const row = document.createElement("tr");
+
+
+			const timeCell = document.createElement("td");
+			timeCell.textContent = time;
+			row.appendChild(timeCell);
+
+
+			const temperatureCell = document.createElement("td");
+			temperatureCell.textContent = forecast.temperature_2m[index];
+			row.appendChild(temperatureCell);
+
+			tbody.appendChild(row);
+		});
+	}
 </script>
 
 

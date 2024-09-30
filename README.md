@@ -106,7 +106,7 @@ For this assignment I used w3schools and the class repository to look at and imp
 
 **ASSIGNMENT 3**
 
-**Statement** 
+**Statement:** 
 At our company Weather Data for Farmers, we are working to combine our front-end code using HTML and JavaScript with our back-end code in SQL Server to build a user-friendly web application. Our plan is to integrate our weather databases with a simple interface that allows farmers to access real-time weather forecasts, view historical weather trends, and manage their preferred locations for weather data. Our goal is to create a web application tool that allows farmers to make informed decisions, to help improve their day-to-day operations and crop management.
 
 **Procedures**
@@ -119,7 +119,7 @@ At our company Weather Data for Farmers, we are working to combine our front-end
 7. 
 8. 
 
-**References**
+**References:**
 
 
 

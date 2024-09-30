@@ -59,7 +59,7 @@ The focus is on providing essential resources, such as crop management tips and 
 GitHub Repository Research The Farm-AI GitHub repository is a mobile application designed to support farmers by providing real-time 
 weather updates and farm management tips. The app integrates a weather API to offer tailored forecasts, rain predictions, and crop 
 recommendations based on the specific climate and location of a farm. Additionally, it includes educational resources on farming 
-techniques and crop care. The README is well-structured, clearly outlining the app’s features, technologies used, and how users can 
+techniques and crop care. The README is well-structured, clearly outlining the appâ€™s features, technologies used, and how users can 
 access and contribute to the project. It provides detailed insights into how machine learning is used for predictions, making the repository 
 an excellent resource for those interested in combining weather data with agricultural advice.
 
@@ -102,5 +102,31 @@ This is GitHub repository contains data sets and APIs related to weather and cli
 https://github.com/KKulma/climate-change-data
 
 For this assignment I used w3schools and the class repository to look at and implement code. I did not use ChatGPT at all. I also used the open API I found and postman to generate the API.
+
+
+**ASSIGNMENT 3**
+
+**Statement** 
+At our company Weather Data for Farmers, we are working to combine our front-end code using HTML and JavaScript with our back-end code in SQL Server to build a user-friendly web application. Our plan is to integrate our weather databases with a simple interface that allows farmers to access real-time weather forecasts, view historical weather trends, and manage their preferred locations for weather data. Our goal is to create a web application tool that allows farmers to make informed decisions, to help improve their day-to-day operations and crop management.
+
+**Procedures**
+1. Procedure to get the current weather by location
+2. Procedure to add a Preferred Location for a User
+3. Procedure to remove a Preferred Location for a User
+4. Procedure to add a new weather forcast
+5. Procedure to get historical weather data for a location
+6. 
+7. 
+8. 
+
+**References**
+
+
+
+
+
+
+
+
 
 

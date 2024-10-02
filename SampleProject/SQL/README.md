@@ -4,7 +4,9 @@ At our company Weather Data for Farmers, we are working to combine our front-end
 # **Procedures**
 
 **spGetCurrentWeatherByLocation**
+
 Action: Get the current weather by specific location.
+
 Parameters:
 - @City NVARCHAR(255)
 

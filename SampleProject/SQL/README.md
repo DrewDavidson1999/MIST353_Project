@@ -17,8 +17,8 @@ Parameters
 - Parameters: 
 
 ### **spAddWeatherForecast**
-   Action: Add a new weather forcast.
-   Parameters:
+   **Action**: Add a new weather forcast.
+   **Parameters**:
    - @Region NVARCHAR(100),
    - @ForecastDate DATE,
    - @Temperature FLOAT,
@@ -30,7 +30,7 @@ Parameters
 
 ## **PUT NAME OF STORED PROCEDURE 6 HERE**
 Action:
-######Parameters
+Parameters
 
 
 1. Procedure to get the current weather by location

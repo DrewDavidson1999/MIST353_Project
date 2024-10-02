@@ -8,15 +8,15 @@ Action: Get the current weather by specific location.
 Parameters:
 - @City NVARCHAR(255)
 
-## **PUT NAME OF STORED PROCEDURE 2 HERE**
+### **PUT NAME OF STORED PROCEDURE 2 HERE**
 Action:
 Parameters
 
-## **PUT NAME OF STORED PROCEDURE 3 HERE**
-Action: 
-Parameters: 
+### **PUT NAME OF STORED PROCEDURE 3 HERE**
+- Action: 
+- Parameters: 
 
-## **spAddWeatherForecast**
+### **spAddWeatherForecast**
    Action: Add a new weather forcast.
    Parameters:
    - @Region NVARCHAR(100),

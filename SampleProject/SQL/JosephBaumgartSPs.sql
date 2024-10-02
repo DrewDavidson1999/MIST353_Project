@@ -16,7 +16,7 @@ BEGIN
 END
 GO
 
-//////////
+
 --Delete Weather Locations
 
 create proc spPreLocDelete

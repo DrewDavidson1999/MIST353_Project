@@ -9,29 +9,32 @@ At our company Weather Data for Farmers, we are working to combine our front-end
   - @City NVARCHAR(255)
 
 ### **PUT NAME OF STORED PROCEDURE 2 HERE**
-Action:
-Parameters
+- Action:
+- Parameters
+  - 
 
 ### **PUT NAME OF STORED PROCEDURE 3 HERE**
 - Action: 
-- Parameters: 
+- Parameters:
+  - 
 
 ### **spAddWeatherForecast**
-   **Action**: Add a new weather forcast.
-   **Parameters**:
+- Action**: Add a new weather forcast.
+- Parameters**:
    - @Region NVARCHAR(100),
    - @ForecastDate DATE,
    - @Temperature FLOAT,
    - @WeatherDescription NVARCHAR(255)
 
 ## **PUT NAME OF STORED PROCEDURE 5 HERE**
-Action:
-Parameters
+- Action:
+- Parameters
+  -
 
 ## **PUT NAME OF STORED PROCEDURE 6 HERE**
-Action:
-Parameters
-
+- Action:
+- Parameters
+  - 
 
 1. Procedure to get the current weather by location
 2. Procedure to add a Preferred Location for a User

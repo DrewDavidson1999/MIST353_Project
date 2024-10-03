@@ -9,8 +9,8 @@ At our company Weather Data for Farmers, we are working to combine our front-end
   @City NVARCHAR(255)
 
 **PUT NAME OF STORED PROCEDURE 2 HERE**
-- Action:
-- Parameters:
+Action:
+Parameters:
 
 **PUT NAME OF STORED PROCEDURE 3 HERE**
 - Action: 
@@ -20,9 +20,9 @@ At our company Weather Data for Farmers, we are working to combine our front-end
 - Action: Add a new weather forcast.
 - Parameters
   @Region NVARCHAR(100)
-  ,@ForecastDate DATE
-  ,@Temperature FLOAT
-  ,@WeatherDescription NVARCHAR(255)
+  @ForecastDate DATE
+  @Temperature FLOAT
+  @WeatherDescription NVARCHAR(255)
 
 5. **PUT NAME OF STORED PROCEDURE 5 HERE**
 - Action:

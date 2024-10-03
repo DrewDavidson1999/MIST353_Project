@@ -53,6 +53,7 @@ At our company Weather Data for Farmers, we are working to combine our front-end
 2. I used ChatGPT to create mock table data, for the tables in the WeatherDataDB.sql file. All though there were formating errors that I had    to correct.
        ChatGPT Promt: Generate me data for these tables using SQL Server
 
-### Next Person's Name Here <--
+### Joey Baumgart 
+1. I used W3Schools as a source for lookig at their stored proc examples
 
 ### Next Person's Name Here <--

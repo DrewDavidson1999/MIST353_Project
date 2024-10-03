@@ -24,12 +24,12 @@ At our company Weather Data for Farmers, we are working to combine our front-end
   - @Temperature FLOAT
   - @WeatherDescription NVARCHAR(255)
 
-5. **PUT NAME OF STORED PROCEDURE 5 HERE**
+**PUT NAME OF STORED PROCEDURE 5 HERE**
 - Action:
 - Parameters
 
 
-6. **PUT NAME OF STORED PROCEDURE 6 HERE**
+**PUT NAME OF STORED PROCEDURE 6 HERE**
 - Action:
 - Parameters:
 

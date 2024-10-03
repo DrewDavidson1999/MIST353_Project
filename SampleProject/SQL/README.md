@@ -29,9 +29,11 @@ At our company Weather Data for Farmers, we are working to combine our front-end
   - @Temperature FLOAT
   - @WeatherDescription NVARCHAR(255)
 
-**PUT NAME OF STORED PROCEDURE 5 HERE**
-- Action:
+**spChangePassword**
+- Action: Changing the user's password
 - Parameters
+  - @UserID int
+  - @PasswordHash nvarchar(255)
 
 
 **PUT NAME OF STORED PROCEDURE 6 HERE**
@@ -44,6 +46,7 @@ At our company Weather Data for Farmers, we are working to combine our front-end
 3. Procedure to remove a Preferred Location for a User
 4. Procedure to add a new weather forcast
 5. Procedure to get historical weather data for a location
+6. Procedure to change a user's password
    
 
 # **References:**
@@ -56,4 +59,7 @@ At our company Weather Data for Farmers, we are working to combine our front-end
 ### Joey Baumgart 
 1. I used W3Schools as a source for lookig at their stored proc examples.
 
-### Next Person's Name Here <--
+### Nathan Stryker
+1. I used ChatGPT to find the word for updating in a stored procedure
+     Prompt: "creating a stored procedure to update a user password in sql"
+2. I used the Class Collaborate videos to get the right format

@@ -44,5 +44,10 @@ At our company Weather Data for Farmers, we are working to combine our front-end
 # **References:**
 
 ### Drew Davidson 
+1. I used the stored procedure SQL files stored in ecampus from class. (VehicleAppSP2.sql) (VehicleAppSP3.sql) (VehicleAppSP4.sql)
+2. I used ChatGPT to create mock table data, for the tables in the WeatherDataDB.sql file. All though there were formating errors that I had    to correct.
+       ChatGPT Promt: Generate me data for these tables using SQL Server
+
+### Next Person's Name Here <--
 
 

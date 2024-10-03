@@ -54,6 +54,6 @@ At our company Weather Data for Farmers, we are working to combine our front-end
        ChatGPT Promt: Generate me data for these tables using SQL Server
 
 ### Joey Baumgart 
-1. I used W3Schools as a source for lookig at their stored proc examples
+1. I used W3Schools as a source for lookig at their stored proc examples.
 
 ### Next Person's Name Here <--

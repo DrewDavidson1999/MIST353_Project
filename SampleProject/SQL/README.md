@@ -19,10 +19,10 @@ At our company Weather Data for Farmers, we are working to combine our front-end
 **spAddWeatherForecast**
 - Action: Add a new weather forcast.
 - Parameters
-  @Region NVARCHAR(100),
-  @ForecastDate DATE,
-  @Temperature FLOAT,
-  @WeatherDescription NVARCHAR(255)
+  @Region NVARCHAR(100)
+  ,@ForecastDate DATE
+  ,@Temperature FLOAT
+  ,@WeatherDescription NVARCHAR(255)
 
 5. **PUT NAME OF STORED PROCEDURE 5 HERE**
 - Action:

@@ -46,13 +46,11 @@ At our company Weather Data for Farmers, we are working to combine our front-end
 - Action: 
 - Parameters
   - 
-  - 
  
 **Stored Procedure Name Here**
 - Action: 
 - Parameters
-  - 
-  -   
+  -  
 
 # **References:**
 

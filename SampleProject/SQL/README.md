@@ -3,22 +3,22 @@ At our company Weather Data for Farmers, we are working to combine our front-end
 
 # **Procedures**
 
-**spGetCurrentWeatherByLocation**
+1. **spGetCurrentWeatherByLocation**
 - Action: Get the current weather by specific location.
 - Parameters:
   - @City NVARCHAR(255)
 
-**PUT NAME OF STORED PROCEDURE 2 HERE**
+2. **PUT NAME OF STORED PROCEDURE 2 HERE**
 - Action:
 - Parameters
   - 
 
-**PUT NAME OF STORED PROCEDURE 3 HERE**
+3. **PUT NAME OF STORED PROCEDURE 3 HERE**
 - Action: 
 - Parameters 
   - 
 
-**spAddWeatherForecast**
+4. **spAddWeatherForecast**
 - Action: Add a new weather forcast.
 - Parameters
    - @Region NVARCHAR(100),
@@ -26,12 +26,12 @@ At our company Weather Data for Farmers, we are working to combine our front-end
    - @Temperature FLOAT,
    - @WeatherDescription NVARCHAR(255)
 
-**PUT NAME OF STORED PROCEDURE 5 HERE**
+5. **PUT NAME OF STORED PROCEDURE 5 HERE**
 - Action:
 - Parameters
   -
 
-**PUT NAME OF STORED PROCEDURE 6 HERE**
+6. **PUT NAME OF STORED PROCEDURE 6 HERE**
 Action:
 - Parameters
   - 

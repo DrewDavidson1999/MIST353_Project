@@ -8,13 +8,18 @@ At our company Weather Data for Farmers, we are working to combine our front-end
 - Parameters:
   - @City NVARCHAR(255)
 
-**PUT NAME OF STORED PROCEDURE 2 HERE**
-- Action:
+**spPreLocAdd**
+- Action: Procedure to add a Preferred Location for a User
 - Parameters:
+  - @LocationID int
+  - @City nvarchar(100)
+  - @State nvarchar(100)
+  - @Country nvarchar(100)
 
-**PUT NAME OF STORED PROCEDURE 3 HERE**
-- Action: 
+**spPreLocDelete**
+- Action: Procedure to remove a Preferred Location for a User
 - Parameters:
+  - @LocationID int
 
 **spAddWeatherForecast**
 - Action: Add a new weather forcast.

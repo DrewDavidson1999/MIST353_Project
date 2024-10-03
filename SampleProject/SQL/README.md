@@ -36,17 +36,19 @@ At our company Weather Data for Farmers, we are working to combine our front-end
   - @PasswordHash nvarchar(255)
 
 
-**PUT NAME OF STORED PROCEDURE 6 HERE**
-- Action:
-- Parameters:
+**spChangePreferredLocation**
+- Action: Changing a user's preferred location
+- Parameters
+  - @UserID int
+  - @Location nvarchar(50)
 
 
 1. Procedure to get the current weather by location
 2. Procedure to add a Preferred Location for a User
 3. Procedure to remove a Preferred Location for a User
 4. Procedure to add a new weather forcast
-5. Procedure to get historical weather data for a location
-6. Procedure to change a user's password
+5. Procedure to change a user's password
+6. Procedure to change a user's preferred location
    
 
 # **References:**

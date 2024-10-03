@@ -45,12 +45,14 @@ At our company Weather Data for Farmers, we are working to combine our front-end
 **Stored Procedure Name Here**
 - Action: 
 - Parameters
-  - 
+  - @LocationID int
+  - @City nvarchar(100)
  
 **Stored Procedure Name Here**
 - Action: 
 - Parameters
-  -  
+  - @LocationID int
+  - @City nvarchar(100)
 
 # **References:**
 

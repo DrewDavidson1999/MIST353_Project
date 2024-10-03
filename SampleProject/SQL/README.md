@@ -42,17 +42,19 @@ At our company Weather Data for Farmers, we are working to combine our front-end
   - @UserID int
   - @Location nvarchar(50)
 
-**Stored Procedure Name Here**
-- Action: 
+**spInsertOtherLocation**
+- Action: Add another location
 - Parameters
-  - @fill out 
-  - @fill out
+  - @City nvarchar(100),     
+  - @State nvarchar(100),    
+  - @Country nvarchar(100) 
  
-**Stored Procedure Name Here**
-- Action: 
+**spInsertNewUser**
+- Action: Add new user
 - Parameters
-  - @fill out
-  - @fill out 
+  - @UserName nvarchar(100)     
+  - @Email nvarchar(255)        
+  - @PasswordHash nvarchar(255)
 
 # **References:**
 
@@ -68,3 +70,7 @@ At our company Weather Data for Farmers, we are working to combine our front-end
 1. I used ChatGPT to find the word for updating in a stored procedure
      Prompt: "creating a stored procedure to update a user password in sql"
 2. I used the Class Collaborate videos to get the right format
+
+### Samantha Wilson
+1. Used w3schools and notes to create stored procedures
+2. Used chatgpt to give me parameters for my procedures.

@@ -51,7 +51,7 @@ Specifically, I asked "How can I hide and show these tables in HTML." It present
 I also used W3Schools to figure out how to do the formatting for my tables and table data.
 I used Google's AI to find the information for my table data.
 
-Samantha Wilson Webpage Research Farms.com is a practical website designed for agricultural professionals, offering weather forecasts 
+Samantha Wilson Webpage Research (https://www.farms.com/) is a practical website designed for agricultural professionals, offering weather forecasts 
 and farming advice in a user-friendly format. The site uses a clean layout with easy navigation, featuring weather tools that provide location-based 
 forecasts and alerts. It integrates Bootstrap components for a responsive design, though it remains simple in functionality without advanced frontend frameworks. 
 The focus is on providing essential resources, such as crop management tips and custom weather alerts, which makes it well-suited for its target audience of farmers looking to optimize their operations based on weather conditions.

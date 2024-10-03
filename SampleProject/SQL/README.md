@@ -32,7 +32,7 @@ At our company Weather Data for Farmers, we are working to combine our front-end
   -
 
 ## **PUT NAME OF STORED PROCEDURE 6 HERE**
-- Action:
+Action:
 - Parameters
   - 
 

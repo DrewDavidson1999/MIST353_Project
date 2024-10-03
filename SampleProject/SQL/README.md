@@ -15,12 +15,12 @@ At our company Weather Data for Farmers, we are working to combine our front-end
 
 ### **PUT NAME OF STORED PROCEDURE 3 HERE**
 - Action: 
-- Parameters: 
+- Parameters 
   - 
 
 ### **spAddWeatherForecast**
 - Action: Add a new weather forcast.
-- Parameters:
+- Parameters
    - @Region NVARCHAR(100),
    - @ForecastDate DATE,
    - @Temperature FLOAT,
@@ -28,12 +28,12 @@ At our company Weather Data for Farmers, we are working to combine our front-end
 
 ## **PUT NAME OF STORED PROCEDURE 5 HERE**
 - Action:
-- Parameters:
+- Parameters
   -
 
 ## **PUT NAME OF STORED PROCEDURE 6 HERE**
 - Action:
-- Parameters: 
+- Parameters
   - 
 
 1. Procedure to get the current weather by location

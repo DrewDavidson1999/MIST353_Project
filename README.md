@@ -20,12 +20,38 @@ User Accounts: Enable user profiles to save locations, set weather alerts, and r
 Advanced Visualizations: Add interactive charts and graphs for more in-depth data analysis.
 Enhanced API Integration: Incorporate multiple weather APIs for more detailed, localized weather data.
 
-Nathan Webpage Research http://farmerweather.com/ Farmer Weather has an interactive radar map that I would like to implement on my page. 
+Nathan Stryker 
+**Webpage Research** 
+http://farmerweather.com/ Farmer Weather has an interactive radar map that I would like to implement on my page. 
 I think having this on the page would definitely make the page look better. When creating a website like this, we are obviously 
 expecting people from all over the United States to use it, so having a radar map of the entire USA would allow for anyone anywhere to 
 quickly see radar for their area. After looking at the radar map, they would then be able to see the weather data for their specific state/region.
 
-Samantha Wilson Webpage Research Farms.com is a practical website designed for agricultural professionals, offering weather forecasts 
+**GitHub Repository Research**
+The GitHub Repository I found in my research was climate-change-data created by Kkulma.
+This repository contains a lot of open projects about climate data, including Climate Change AI that I think could be incorporated on our webpage.
+The item that really drew my attention to this repository, though, was the APIs; specifically, Open-Meteo API.
+Open-Meteo API is a weather and climate API that includes forecasts, historical weather data, and climate data.
+By incorporating some code from the Climate Change AI and using the Open-Meteo API, we can implement up-to-date forecasts and historical data where necessary.
+
+**Individual Contributions**
+I did the seasonal data page. On my page, I have seasonal data for different regions, and I prompt the user to select the region they live in.
+I prefer this compared to presenting information based on user geolocation because they have the freedom to search for any region's data easily.
+As we move forward with the project, I want to do every state's seasonal data, because that can give an even bigger insight to users of the website on normal farming conditions for them.
+I included regional tables with the season, average temperature during that season, and crops typically planted in that region and season.
+I also made the buttons that show and hide regional information based on the button selected.
+Additionally, I included a background picture of farmers driving farming equipment with a cloudy sky, which I thought played into the theme of farmer forecasting well.
+The table text is also a dark green color to represent farming as a whole, as green seems to be a common color associated with farming.
+Moving forward, I also want to find a way to more effectively use my buttons so I do not have huge blocks of code under each function. 
+Also when all tables show, the green color at the bottom is hard to read due to the color of the background picture, but I think it is worth it because once a region is selected the text is easily read.
+
+**AI Usage and Other Resources**
+I asked ChatGPT for the specific JavaScript to make my buttons perform in the way I wanted them to. 
+Specifically, I asked "How can I hide and show these tables in HTML." It presented me with a partial solution that I can now build off of to implement more tables and more buttons in a simple and effective way.
+I also used W3Schools to figure out how to do the formatting for my tables and table data.
+I used Google's AI to find the information for my table data.
+
+Samantha Wilson Webpage Research (https://www.farms.com/) is a practical website designed for agricultural professionals, offering weather forecasts 
 and farming advice in a user-friendly format. The site uses a clean layout with easy navigation, featuring weather tools that provide location-based 
 forecasts and alerts. It integrates Bootstrap components for a responsive design, though it remains simple in functionality without advanced frontend frameworks. 
 The focus is on providing essential resources, such as crop management tips and custom weather alerts, which makes it well-suited for its target audience of farmers looking to optimize their operations based on weather conditions.
@@ -33,7 +59,7 @@ The focus is on providing essential resources, such as crop management tips and 
 GitHub Repository Research The Farm-AI GitHub repository is a mobile application designed to support farmers by providing real-time 
 weather updates and farm management tips. The app integrates a weather API to offer tailored forecasts, rain predictions, and crop 
 recommendations based on the specific climate and location of a farm. Additionally, it includes educational resources on farming 
-techniques and crop care. The README is well-structured, clearly outlining the app’s features, technologies used, and how users can 
+techniques and crop care. The README is well-structured, clearly outlining the appâ€™s features, technologies used, and how users can 
 access and contribute to the project. It provides detailed insights into how machine learning is used for predictions, making the repository 
 an excellent resource for those interested in combining weather data with agricultural advice.
 
@@ -66,3 +92,13 @@ W3Schools was very helpful in understanding core HTML concepts, format, and find
 GitHub Repository Resources Used: (https://github.com/Akuien/SimpleWeatherApp/blob/main/index.html) (https://github.com/shivang21007/Weather-forcast/blob/main/index.html)
 Website Inspected: (https://openweathermap.org/)
 Other Resources: (ChatGPT.com) (W3Schools.com)
+
+Joey Baumgart Individual Contributions: Created a webpage with titles and a background, used an API to gather data, and used a button to display the data from the API. Added to the readme and did website and repository research.
+
+This website has historical data and provides a useful API. The API collects several useful variables relating to temperature and climate. This API is the one I am implementing into my web page since it gives good results back.
+https://open-meteo.com/
+
+This is GitHub repository contains data sets and APIs related to weather and climate change. The APIs can be used for data in multiple climate fields. The ReadMe lists several APIs to use and their descriptions of what they are and how they can be used.
+https://github.com/KKulma/climate-change-data
+
+For this assignment I used w3schools and the class repository to look at and implement code. I did not use ChatGPT at all. I also used the open API I found and postman to generate the API.

@@ -28,7 +28,7 @@ BEGIN
 END
 GO
 
-execute spPreLocAdd @LocationID = 123, @City = 'Morgantown', @State = 'West Virginia',@Country =  'United States'
+execute spPreLocAdd @LocationID = 1, @City = 'Morgantown', @State = 'West Virginia',@Country =  'United States'
 
 GO
 

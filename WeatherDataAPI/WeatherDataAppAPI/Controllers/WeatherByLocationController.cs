@@ -7,19 +7,19 @@ namespace WeatherDataAppAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class WeatherController : ControllerBase
+    public class WeatherByLocationController : ControllerBase
     {
         private readonly WeatherRepository _weatherRepository;
 
         // Constructor that injects the WeatherRepository
-        public WeatherController(WeatherRepository weatherRepository)
+        public WeatherByLocationController(WeatherRepository weatherRepository)
         {
             _weatherRepository = weatherRepository;
         }
 
         // Define an HTTP GET method to retrieve weather data by city
         [HttpGet("GetWeatherByCity/{city}")]
-        public ActionResult<IEnumerable<WeatherData>> GetWeatherByCity(string city)
+        public ActionResult<IEnumerable<IWeatherData>> GetWeatherByCity(string city)
         {
             try
             {

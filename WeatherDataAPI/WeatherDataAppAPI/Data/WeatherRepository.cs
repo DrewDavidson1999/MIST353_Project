@@ -39,7 +39,7 @@ namespace WeatherDataAppAPI.Repositories
         }
 
         // Implement the method to get current weather data by city
-        public IEnumerable<WeatherData> GetCurrentWeatherByCity(string city)
+        public IEnumerable<IWeatherData> GetCurrentWeatherByCity(string city)
         {
             using (var connection = new SqlConnection(_connectionString))
             {
@@ -52,7 +52,7 @@ namespace WeatherDataAppAPI.Repositories
                 string query = "SELECT Location, Temperature, Humidity, WindSpeed, WeatherDescription, DateTime FROM ext_Weather_Current WHERE Location = @City";
 
                 // Query the database using Dapper
-                var weatherData = connection.Query<WeatherData>(query, parameters);
+                var weatherData = connection.Query<IWeatherData>(query, parameters);
 
                 return weatherData; // Return the retrieved weather data
             }

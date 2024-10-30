@@ -23,8 +23,7 @@ The **GetWeatherByLocation** API allows users to retrieve the current weather da
   - **dateTime**: Date and time when the data was retrieved (`DateTime`).
 
 #### Example Success Response:
-- Code 200: Success
-```json
+```
 [
   {
     "location": "Sacramento",
@@ -35,3 +34,6 @@ The **GetWeatherByLocation** API allows users to retrieve the current weather da
     "dateTime": "2024-09-30T17:10:40.67"
   }
 ]
+```
+
+### 2. 

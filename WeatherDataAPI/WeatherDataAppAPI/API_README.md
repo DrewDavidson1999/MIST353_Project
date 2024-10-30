@@ -10,18 +10,26 @@ The **GetWeatherByLocation** API allows users to retrieve the current weather da
   - **Required**: Yes
   - **Description**: This value should be passed as a URL path parameter.
   - **Example**: `Sacramento`
+### Example Curl Request:
+```
+curl -X 'GET' \
+  'https://localhost:7085/api/WeatherByLocation/GetWeatherByCity/Sacramento' \
+  -H 'accept: text/plain'
+```
 ### Example Request URL:
-- https://localhost:7085/api/WeatherByLocation/GetWeatherByCity/Sacramento
+```
+https://localhost:7085/api/WeatherByLocation/GetWeatherByCity/Sacramento
+```
 ### Outputs:
 #### Success (200 OK):
-- **Response Body (JSON)**: When successful, the API returns a JSON array with the following fields:
-  - **location**: Name of the city (`string`).
-  - **temperature**: Current temperature (`double`).
-  - **humidity**: Current humidity in percentage (`int`).
-  - **windSpeed**: Current wind speed (`double`).
-  - **weatherDescription**: Brief description of the weather (`string`).
-  - **dateTime**: Date and time when the data was retrieved (`DateTime`).
-
+```
+  **location**: Name of the city (`string`).
+  **temperature**: Current temperature (`double`).
+  **humidity**: Current humidity in percentage (`int`).
+  **windSpeed**: Current wind speed (`double`).
+  **weatherDescription**: Brief description of the weather (`string`).
+  **dateTime**: Date and time when the data was retrieved (`DateTime`).
+```
 #### Example Success Response:
 ```
 [

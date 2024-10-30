@@ -5,17 +5,16 @@ GO
 --Add Weather Locations
 
 create proc spPreLocAdd
-@LocationID int
-@City nvarchar(100)
-@State nvarchar(100)
+@LocationID int,
+@City nvarchar(100),
+@State nvarchar(100),
 @Country nvarchar(100)
 AS
 BEGIN
-	Insert into ext_Locations(LocationID, City, State, Country)
-	Values(@LocationID, @City, @State, @Country)
+	Insert into ext_Locations(City, State, Country)
+	Values(@City, @State, @Country)
 END
 GO
-
 
 --Delete Weather Locations
 
@@ -28,10 +27,12 @@ BEGIN
 END
 GO
 
-execute spPreLocAdd @LocationID = 123, @City = 'Morgantown', @State = 'West Virginia',@Country =  'United States'
+
+execute spPreLocAdd @LocationID = 99, @City = 'Centreville', @State = 'Virginia',@Country =  'USA'
 
 GO
 
-execute spPreLocDelete 1
+
+execute spPreLocDelete 8
 
 GO

@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WeatherDataAppAPI.Data;
+using WeatherDataAppAPI.Entities;
 using WeatherDataAppAPI.Repositories;
 
 namespace WeatherDataAppAPI.Controllers
@@ -16,7 +18,7 @@ namespace WeatherDataAppAPI.Controllers
 		}
 
 		[HttpGet("{locationID, city, state, country}")]
-		public async Task<List<WeatherDataAddServ>> PreLocAddGetDetails(string city, string state, string country)
+		public async Task<List<WeatherDataAdd>> PreLocAddGetDetails(string city, string state, string country)
 		{
 			var PreLocAddDetails= await weatherDataAdd.PreLocAddGetDetails(city, state, country);
 			if (PreLocAddDetails == null)

@@ -15,7 +15,7 @@ namespace WeatherDataAppAPI.Repositories
 		{
 			_dbContextClass = dBContextClass;
 		}
-		public async Task<List<WeatherDataAddServ>> PreLocAddGetDetails( string city, string state, string country)
+		public async Task<List<WeatherDataAdd>> PreLocAddGetDetails( string city, string state, string country)
 		{
 
 			var parameter = new List<SqlParameter>();

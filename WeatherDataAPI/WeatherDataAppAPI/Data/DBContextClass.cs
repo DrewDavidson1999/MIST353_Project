@@ -11,6 +11,7 @@ namespace WeatherDataAppAPI.Data
 		public DBContextClass(DbContextOptions<DBContextClass> options) : base(options)
 		{ }
 		public DbSet<WeatherDataAdd> WeatherDataAdd { get; set; }
+		public DbSet<WeatherDataDelete> WeatherDataDelete { get; set; }
 
 	}
 }

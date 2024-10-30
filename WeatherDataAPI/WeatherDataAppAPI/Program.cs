@@ -2,12 +2,14 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Identity.Web;
 using WeatherDataAppAPI.Repositories;
+using WeatherDataAppAPI.Data;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddScoped<IWeatherDataAdd, WeatherDataADD>();
+builder.Services.AddScoped<IWeatherDataAdd, WeatherDataAddServ>();
 builder.Services.AddDbContext<DBContextClass>();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

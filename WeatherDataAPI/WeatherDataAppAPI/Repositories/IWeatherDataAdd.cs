@@ -1,4 +1,7 @@
-﻿
+﻿using WeatherDataAppAPI.Data;
+using WeatherDataAppAPI.Entities;
+using WeatherDataAppAPI.Repositories;
+
 
 
 namespace WeatherDataAppAPI.Repositories
@@ -6,7 +9,7 @@ namespace WeatherDataAppAPI.Repositories
 	public interface IWeatherDataAdd
 	{
 
-		public Task<List<WeatherDataAdd>> WeatherDataAddGetDetails(int locationID, string city, string state, string country);
+		public Task<List<WeatherDataAddServ>> PreLocAddGetDetails( string city, string state, string country);
 
 	}
 }

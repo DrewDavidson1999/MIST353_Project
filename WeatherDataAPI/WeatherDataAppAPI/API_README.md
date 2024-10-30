@@ -11,7 +11,7 @@ The **GetWeatherByLocation** API allows users to retrieve the current weather da
   - **Description**: This value should be passed as a URL path parameter.
   - **Example**: `Sacramento`
 ### Example Request URL:
-- https://localhost:7085/api/WeatherByLocation/GetWeatherByCity/Sacramento
+- "https://localhost:7085/api/WeatherByLocation/GetWeatherByCity/Sacramento"
 ### Outputs:
 #### Success (200 OK):
 - **Response Body (JSON)**: When successful, the API returns a JSON array with the following fields:

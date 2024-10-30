@@ -1,4 +1,4 @@
-# SampleProject
+# WeatherData
 
 OverView
 
@@ -102,3 +102,7 @@ This is GitHub repository contains data sets and APIs related to weather and cli
 https://github.com/KKulma/climate-change-data
 
 For this assignment I used w3schools and the class repository to look at and implement code. I did not use ChatGPT at all. I also used the open API I found and postman to generate the API.
+
+
+## Proposal/Design Document
+For more details, see the [Proposal/Design Document](./API_README.md).

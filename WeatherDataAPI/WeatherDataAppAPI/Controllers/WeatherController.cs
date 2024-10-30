@@ -21,16 +21,26 @@ namespace WeatherDataAppAPI.Controllers
         [HttpGet("GetWeatherByCity/{city}")]
         public ActionResult<IEnumerable<WeatherData>> GetWeatherByCity(string city)
         {
-            // Fetch data using the repository
-            var result = _weatherRepository.GetCurrentWeatherByCity(city);
-
-            // Check if no results were returned
-            if (result == null)
+            try
             {
-                return NotFound($"Weather data for city '{city}' not found.");
-            }
+                // Fetch data using the repository
+                var result = _weatherRepository.GetCurrentWeatherByCity(city);
 
-            return Ok(result); // Return the weather data if found
+                // Check if no results were returned
+                if (result == null || !result.Any())
+                {
+                    return NotFound($"Weather data for city '{city}' not found.");
+                }
+
+                return Ok(result); // Return the weather data if found
+            }
+            catch (Exception ex)
+            {
+                // Log the exception if necessary (optional)
+                return StatusCode(StatusCodes.Status500InternalServerError, $"An error occurred: {ex.Message}");
+            }
         }
     }
 }
+
+

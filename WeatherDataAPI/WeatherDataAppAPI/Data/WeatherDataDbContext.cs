@@ -6,6 +6,8 @@ namespace WeatherDataAppAPI.Data;
 
 public partial class WeatherDataDbContext : DbContext
 {
+    internal readonly IEnumerable<object> WeatherData;
+
     public WeatherDataDbContext()
     {
     }

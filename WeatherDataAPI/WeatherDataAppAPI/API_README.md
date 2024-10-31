@@ -54,10 +54,10 @@ The AddWeatherForecast API allows users to add a new weather forecast for a spec
   - **Description**: This value should be passed as a URL path parameter.
   - **Example**: `Los Angeles`
 - **ForcastDate**: Date of weather forcasted
-  - Type: 'DateTime'
+  - Type: `DateTime`
   - Required: Yes
   - Description: The date should be passed in the JSON body to specify when the forecast applies.
-  - Example: '2024-09-30'
+  - Example: `2024-09-30`
 - **temperature**: Forecasted temperature for the specified date.
   - Type: `double`
   - Required: Yes

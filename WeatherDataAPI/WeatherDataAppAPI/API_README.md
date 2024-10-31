@@ -1,6 +1,6 @@
 # Weather Application API Documentation
 
-## Drew Davidson APIs
+## **Drew Davidson APIs**
 ### 1. GetWeatherByLocation API
 #### Purpose:
 The **GetWeatherByLocation** API allows users to retrieve the current weather data for a specified city. This API pulls weather data from the `ext_Weather_Current` table from the WeatherDataDB based on the city input. This Web APi provides detailed weather information to users of the web application.
@@ -123,7 +123,7 @@ https://localhost:7085/api/WeatherByLocation/AddWeatherForecast
     - `WeatherDescription`: `string` - Brief description of the weather.
     - `DateTime`: `DateTime` - Timestamp of the recorded weather data. 
 
-## Joseph Baumgart APIs
+## **Joseph Baumgart APIs**
 ### 1. GetWeatherAdd API
 #### Purpose:
 The **GetWeatherAdd** API inserts a new location into the _extLocations table. The API asks for a city, state, and LocationID. The LocationID autoincriments so it is not truly necessary. The API is based off spPreLocAdd.

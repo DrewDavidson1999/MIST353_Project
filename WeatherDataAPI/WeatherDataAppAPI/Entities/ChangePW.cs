@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WeatherDataAppAPI.Entities
 {
-    public class ChangePassword
+    public class ChangePW
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

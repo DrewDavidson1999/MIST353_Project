@@ -123,12 +123,12 @@ The **GetWeatherAdd** API inserts a new location into the _extLocations table. T
 ### Example Curl Request:
 ```
 curl -X 'GET' \
-  'https://localhost:7085/api/WeatherByLocation/GetWeatherByCity/Sacramento' \
+  'https://localhost:7085/api/WeatherDataAdd/99?city=centreville&state=virginia&country=USA' \
   -H 'accept: text/plain'
 ```
 ### Example Request URL:
 ```
-https://localhost:7085/api/WeatherByLocation/GetWeatherByCity/Sacramento
+https://localhost:7085/api/WeatherDataAdd/99?city=centreville&state=virginia&country=USA
 ```
 ### Outputs:
 #### Success (200 OK):
@@ -153,13 +153,13 @@ The **GetWeatherDelete** API deletes a location by primary key from the _extLoca
   - **Example**: `99`
 ### Example Curl Request:
 ```
-curl -X 'GET' \
-  'https://localhost:7085/api/WeatherByLocation/GetWeatherByCity/Sacramento' \
+curl -X 'DELETE' \
+  'https://localhost:7085/api/WeatherDataDelete/99' \
   -H 'accept: text/plain'
 ```
 ### Example Request URL:
 ```
-https://localhost:7085/api/WeatherByLocation/GetWeatherByCity/Sacramento
+https://localhost:7085/api/WeatherDataDelete/99
 ```
 ### Outputs:
 #### Success (200 OK):

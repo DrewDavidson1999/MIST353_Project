@@ -5,7 +5,7 @@
 #### Purpose:
 The **GetWeatherByLocation** API allows users to retrieve the current weather data for a specified city. This API pulls weather data from the `ext_Weather_Current` table from the WeatherDataDB based on the city input. This Web APi provides detailed weather information to users of the web application.
 ### Inputs:
-####**Region**: Name of Region for which the weather data is requested.
+-**City**: Name of City for which the weather data is requested.
   - **Type**: `string`
   - **Required**: Yes
   - **Description**: This value should be passed as a URL path parameter.

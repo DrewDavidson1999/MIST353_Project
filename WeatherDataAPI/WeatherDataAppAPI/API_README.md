@@ -47,7 +47,7 @@ https://localhost:7085/api/WeatherByLocation/GetWeatherByCity/Sacramento
 ## Joseph Baumgart APIs
 ### 1. GetWeatherAdd API
 #### Purpose:
-The **GetWeatherByLocation** API allows users to retrieve the current weather data for a specified city. This API pulls weather data from the `ext_Weather_Current` table from the WeatherDataDB based on the city input. This Web APi provides detailed weather information to users of the web application.
+The **GetWeatherAdd** API inserts a new location into the _extLocations table. The API asks for a city, state, and LocationID. The LocationID autoincriments so it is not truly necessary. The API is based off spPreLocAdd.
 ### Inputs:
 - **city**: Name of city for which the weather data is requested.
   - **Type**: `string`
@@ -89,7 +89,7 @@ https://localhost:7085/api/WeatherByLocation/GetWeatherByCity/Sacramento
 ```
 ### 2. GetWeatherDelete API
 #### Purpose:
-The **GetWeatherByLocation** API allows users to retrieve the current weather data for a specified city. This API pulls weather data from the `ext_Weather_Current` table from the WeatherDataDB based on the city input. This Web APi provides detailed weather information to users of the web application.
+The **GetWeatherDelete** API deletes a location by primary key from the _extLocations table. The API asks for a key and then it removes that from the table. The API is based off spPreLocDelete.
 ### Inputs:
 - **city**: Name of city for which the weather data is requested.
   - **Type**: `string`

@@ -94,6 +94,34 @@ https://localhost:7085/api/WeatherByLocation/AddWeatherForecast
 ```
 "Weather forecast added successfully."
 ```
+### `WeatherByLocationController.cs`
+- **Type**: Controller
+- **Purpose**: Handles API endpoints for both `GetWeatherByLocation` and `AddWeatherForecast` APIs.
+- **Includes**:
+  - **Endpoints**:
+    - `GET /api/WeatherByLocation/GetWeatherByCity/{city}`: Retrieves current weather data for the specified city.
+    - `POST /api/WeatherByLocation/AddWeatherForecast`: Adds a new weather forecast for a specified region.
+  - **Methods**:
+    - `GetWeatherByCity`: Retrieves weather data by city.
+    - `AddWeatherForecast`: Adds a forecast to the database based on the provided JSON data.
+### `WeatherRepository.cs`
+- **Type**: Repository
+- **Purpose**: Contains methods for database access to fetch and insert weather data. Used by both `GetWeatherByLocation` and `AddWeatherForecast` APIs.
+- **Includes**:
+  - **Methods**:
+    - `GetCurrentWeatherByCity`: Queries the database to retrieve current weather data for a specified city.
+    - `AddWeatherForecast`: Calls the stored procedure `spAddWeatherForecast` to insert a new forecast into the `ext_Weather_Forecasts` table.
+### `IWeatherData.cs`
+- **Type**: Interface
+- **Purpose**: Serves as the data model for current weather information, used by both APIs to structure weather data.
+- **Includes**:
+  - **Properties**:
+    - `Location`: `string` - Name of the city.
+    - `Temperature`: `double` - Current temperature.
+    - `Humidity`: `int` - Humidity percentage.
+    - `WindSpeed`: `double` - Wind speed.
+    - `WeatherDescription`: `string` - Brief description of the weather.
+    - `DateTime`: `DateTime` - Timestamp of the recorded weather data. 
 
 ## Joseph Baumgart APIs
 ### 1. GetWeatherAdd API

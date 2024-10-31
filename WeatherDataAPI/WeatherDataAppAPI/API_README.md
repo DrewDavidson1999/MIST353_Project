@@ -125,23 +125,12 @@ https://localhost:7085/api/WeatherByLocation/GetWeatherByCity/Sacramento
 ### Outputs:
 #### Success (200 OK):
 ```
-  **location**: Name of the city (`string`).
-  **temperature**: Current temperature (`double`).
-  **humidity**: Current humidity in percentage (`int`).
-  **windSpeed**: Current wind speed (`double`).
-  **weatherDescription**: Brief description of the weather (`string`).
-  **dateTime**: Date and time when the data was retrieved (`DateTime`).
-```
-#### Example Success Response:
-```
-[
+  [
   {
-    "location": "Sacramento",
-    "temperature": 75.5,
-    "humidity": 60,
-    "windSpeed": 10.2,
-    "weatherDescription": "Clear Sky",
-    "dateTime": "2024-09-30T17:10:40.67"
+    "locationID": 99,
+    "city": "centreville",
+    "state": "virginia",
+    "country": "USA"
   }
 ]
 ```
@@ -167,23 +156,9 @@ https://localhost:7085/api/WeatherByLocation/GetWeatherByCity/Sacramento
 ### Outputs:
 #### Success (200 OK):
 ```
-  **location**: Name of the city (`string`).
-  **temperature**: Current temperature (`double`).
-  **humidity**: Current humidity in percentage (`int`).
-  **windSpeed**: Current wind speed (`double`).
-  **weatherDescription**: Brief description of the weather (`string`).
-  **dateTime**: Date and time when the data was retrieved (`DateTime`).
-```
-#### Example Success Response:
-```
-[
+  [
   {
-    "location": "Sacramento",
-    "temperature": 75.5,
-    "humidity": 60,
-    "windSpeed": 10.2,
-    "weatherDescription": "Clear Sky",
-    "dateTime": "2024-09-30T17:10:40.67"
+    "locationID": 99
   }
 ]
 ```

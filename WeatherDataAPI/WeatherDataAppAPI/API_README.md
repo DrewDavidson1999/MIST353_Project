@@ -140,7 +140,7 @@ The **GetWeatherDelete** API deletes a location by primary key from the _extLoca
 ### Inputs:
 - **locationID**: Name of locationID being added.
   - **Type**: `int`
-  - **Required**: No
+  - **Required**: Yes
   - **Description**: This value should be passed as a URL path parameter.
   - **Example**: `99`
 ### Example Curl Request:

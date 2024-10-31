@@ -49,11 +49,26 @@ https://localhost:7085/api/WeatherByLocation/GetWeatherByCity/Sacramento
 #### Purpose:
 The **GetWeatherAdd** API inserts a new location into the _extLocations table. The API asks for a city, state, and LocationID. The LocationID autoincriments so it is not truly necessary. The API is based off spPreLocAdd.
 ### Inputs:
-- **city**: Name of city for which the weather data is requested.
+- **city**: Name of city being added.
   - **Type**: `string`
   - **Required**: Yes
   - **Description**: This value should be passed as a URL path parameter.
-  - **Example**: `Sacramento`
+  - **Example**: `Centreville`
+- **state**: Name of state being added.
+  - **Type**: `string`
+  - **Required**: Yes
+  - **Description**: This value should be passed as a URL path parameter.
+  - **Example**: `Virginia`
+- **country**: Name of country being added.
+  - **Type**: `string`
+  - **Required**: Yes
+  - **Description**: This value should be passed as a URL path parameter.
+  - **Example**: `USA`
+- **locationID**: Name of locationID being added.
+  - **Type**: `int`
+  - **Required**: No
+  - **Description**: This value should be passed as a URL path parameter.
+  - **Example**: `99`
 ### Example Curl Request:
 ```
 curl -X 'GET' \
@@ -91,11 +106,11 @@ https://localhost:7085/api/WeatherByLocation/GetWeatherByCity/Sacramento
 #### Purpose:
 The **GetWeatherDelete** API deletes a location by primary key from the _extLocations table. The API asks for a key and then it removes that from the table. The API is based off spPreLocDelete.
 ### Inputs:
-- **city**: Name of city for which the weather data is requested.
-  - **Type**: `string`
-  - **Required**: Yes
+- **locationID**: Name of locationID being added.
+  - **Type**: `int`
+  - **Required**: No
   - **Description**: This value should be passed as a URL path parameter.
-  - **Example**: `Sacramento`
+  - **Example**: `99`
 ### Example Curl Request:
 ```
 curl -X 'GET' \

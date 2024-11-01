@@ -2,27 +2,25 @@
 using System.ComponentModel.DataAnnotations.Schema;
 
 
-namespace WeatherDataAppAPI.Entities
-    
+namespace WeatherDataAppAPI.Entities;
+
+
 public class InsertLocation
 {
-	public InsertLocation()
-	{
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int LocationID { get; set; }
+    public InsertLocation()
+    { }
+       
 
-        [Required]
-        [StringLength(100)]
-        public string City { get; set; }
+    [StringLength(100)]
+    public string City { get; set; }
 
-        [Required]
-        [StringLength(100)]
-        public string State { get; set; }
 
-        [Required]
-        [StringLength(100)]
-        public string Country { get; set; }
+    [StringLength(100)]
+    public string State { get; set; }
+
+
+    [StringLength(100)]
+    public string Country { get; set; }
 
     }
-}
+

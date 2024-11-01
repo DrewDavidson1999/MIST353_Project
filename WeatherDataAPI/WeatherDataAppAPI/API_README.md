@@ -123,6 +123,107 @@ https://localhost:7085/api/WeatherByLocation/AddWeatherForecast
     - `WeatherDescription`: `string` - Brief description of the weather.
     - `DateTime`: `DateTime` - Timestamp of the recorded weather data. 
 
+<<<<<<< HEAD
+### 2. 
+## Samantha Wilsons APIs
+### 1. InsertNewUser API
+#### Purpose:
+The **InsertNewUser** API allows users to register a new user in the system. This API stores user information in the database and returns the details of the newly created user. It is designed to facilitate user registration for the web application.
+### Inputs:
+- **Username**:The desired username for the new user.
+Type: string
+Required: Yes
+Description: This value should be passed as a URL path parameter.
+Example: john_doe
+
+- **email**: The email address of the new user.
+Type: string
+Required: Yes
+Description: This value should be passed as a URL path parameter.
+Example: john@example.com
+
+- **passwordHash**: The hashed password for the new user.
+Type: string
+Required: Yes
+Description: This value should be passed as a URL path parameter. Ensure the password is securely hashed before sending.
+Example: Password123
+### Example Curl Request:
+```
+curl -X 'POST' \
+  'https://localhost:7085/api/NewUser/InsertNewUser/john_doe/john@example.com/hashed_password_value' \
+  -H 'accept: application/json'
+
+```
+### Example Request URL:
+```
+https://localhost:7085/api/NewUser/InsertNewUser/john_doe/john@example.com/hashed_password_value
+
+```
+### Outputs:
+#### Success (201 Created):
+```
+    **userName**: The username of the new user (string).
+    **email**: The email address of the new user (string).
+```
+#### Example Success Response:
+```
+{
+  "userName": "john_doe",
+  "email": "john@example.com",
+}
+
+```
+### 2. InsertLocation API
+#### Purpose:
+The **InsertLocation** API allows users to add a new location to the system. This API stores location information in the database and returns the details of the newly added location. It is designed to facilitate location registration for the web application.
+### Inputs:
+- **city**: The name of the city to be added.
+Type: string
+Required: Yes
+Description: This value should be passed as a URL path parameter.
+Example: Sacramento
+
+- **state**: The state where the city is located.
+Type: string
+Required: Yes
+Description: This value should be passed as a URL path parameter.
+Example: California
+
+- **country**: The country where the city is located.
+Type: string
+Required: Yes
+Description: This value should be passed as a URL path parameter.
+Example: USA
+### Example Curl Request:
+```
+curl -X 'POST' \
+  'https://localhost:7085/api/Location/InsertLocation/Sacramento/California/USA' \
+  -H 'accept: application/json'
+
+```
+### Example Request URL:
+```
+https://localhost:7085/api/Location/InsertLocation/Sacramento/California/USA
+
+```
+### Outputs:
+#### Success (201 Created):
+```
+    **city**: The name of the city (string).
+    **state**: The state where the city is located (string).
+    **country**: The country where the city is located (string).
+   
+```
+#### Example Success Response:
+```
+{
+  "city": "Sacramento",
+  "state": "California",
+  "country": "USA",
+  
+}
+```
+=======
 ## **Joseph Baumgart APIs**
 ### 1. GetWeatherAdd API
 #### Purpose:
@@ -198,3 +299,4 @@ https://localhost:7085/api/WeatherDataDelete/99
   }
 ]
 ```
+>>>>>>> 85992f6430bc6c0cb870c42f5bbdee16612b7a91

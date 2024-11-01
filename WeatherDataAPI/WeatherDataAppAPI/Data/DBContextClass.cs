@@ -18,6 +18,8 @@ namespace WeatherDataAppAPI.Data
 
 		public DbSet<ChangePW> ChangePW { get; set; }
 
+		public DbSet<UpdatePreferredLocation> UpdatePreferredLocation { get; set; }
+
 
 	}
 }

@@ -377,3 +377,5 @@ https://localhost:7085/api/ChangePreferredLocation/UpdatePreferredLocation
 ```
 "Preferred Location updated successfully!"
 ```
+### Sources
+-**ChatGPT**: I used ChatGPT for my Curl info, asking it to write me Curl requests and responses based on the function of my API. I also used it for a simple formatting issue in one of my APIs.

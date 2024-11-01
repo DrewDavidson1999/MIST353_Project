@@ -123,8 +123,7 @@ https://localhost:7085/api/WeatherByLocation/AddWeatherForecast
     - `WeatherDescription`: `string` - Brief description of the weather.
     - `DateTime`: `DateTime` - Timestamp of the recorded weather data. 
 
-<<<<<<< HEAD
-### 2. 
+ 
 ## Samantha Wilsons APIs
 ### 1. InsertNewUser API
 #### Purpose:

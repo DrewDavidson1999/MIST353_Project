@@ -4,9 +4,8 @@ using WeatherDataAppAPI.Repositories;
 
 namespace WeatherDataAppAPI.Repositories
 {
-	public interface IInsertLocation
-	{
-        public async Task<bool> InsertLocationGetDetails(string city, string state, string country);
-
+    public interface IInsertLocation
+    {
+        Task<List<InsertLocation>> InsertLocationGetDetails(string city, string state, string country);
     }
 }

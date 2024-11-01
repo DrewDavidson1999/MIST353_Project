@@ -4,9 +4,10 @@ using WeatherDataAppAPI.Entities;
 using WeatherDataAppAPI.Repositories;
 
 namespace WeatherDataAppAPI.Controllers
+{ 
     [Route("api/[controller]")]
     [ApiController]
-{
+
 	public class InsertLocationController : ControllerBase
 	{
         private readonly InsertLocationServ _insertLocationServ;

@@ -16,6 +16,8 @@ namespace WeatherDataAppAPI.Data
 		public DbSet<NewUser> NewUser { get; set; }
 		public DbSet<InsertLocation> InsertLocation { get; set; }
 
+		public DbSet<ChangePW> ChangePW { get; set; }
+
 
 	}
 }

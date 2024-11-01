@@ -10,6 +10,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+builder.Services.AddScoped<IChangePW, ChangePWServ>();
+builder.Services.AddDbContext<DBContextClass>();
+
 builder.Services.AddScoped<INewUser, NewUserServ>();
 builder.Services.AddScoped<IInsertLocation, InsertLocationServ>();
 builder.Services.AddDbContext<DBContextClass>();

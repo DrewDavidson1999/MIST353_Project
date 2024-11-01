@@ -1,8 +1,12 @@
-﻿namespace WeatherDataAppAPI.Repositories
+﻿using WeatherDataAppAPI.Data;
+using WeatherDataAppAPI.Entities;
+using WeatherDataAppAPI.Repositories;
+
+namespace WeatherDataAppAPI.Repositories
 {
 	public interface IInsertLocation
 	{
-        public async Task<bool<NewUser>> InsertNewUserGetDetails(string city, string state, string country);
+        public async Task<bool> InsertLocationGetDetails(string city, string state, string country);
 
     }
 }

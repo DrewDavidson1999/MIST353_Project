@@ -5,24 +5,26 @@ using WeatherDataAppAPI.Repositories;
 
 namespace WeatherDataAppAPI.Controllers
 {
-	public class newusercontroller : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class NewUserController : ControllerBase
+
 	{
-        private readonly NewUserServ NewUser;
-        public newusercontroller(NewUserServ NewUser)
+        public NewUserController(NewUserServ newUserServ)
         {
-            this.NewUserServ = NewUser;
+            _newUserServ = newUserServ;
         }
 
-        [HttpGet("{userName, email, passwordHash}")]
-        public async Task<bool<NewUser>> InsertNewUserGetDetails(string userName, string email, string passwordHash);
+        [HttpGet("{userName}/{email}/{passwordHash}")]
+        public ActionResult<NewUser> InsertNewUserGetDetails(string userName, string email, string passwordHash)
         {
-            var NewUserDetails = await NewUserServ.InsertNewUserGetDetails(userName, email, passwordHash);
-            if (NewUserDetails == null)
+            var newUserDetails = _newUserServ.InsertNewUserGetDetails(userName, email, passwordHash);
+            if (newUserDetails == null)
             {
                 return NotFound();
             }
-            {
-                return NewUserDetails;
-            }
-	}
+
+            return Ok(newUserDetails);
+        }
+    }
 }

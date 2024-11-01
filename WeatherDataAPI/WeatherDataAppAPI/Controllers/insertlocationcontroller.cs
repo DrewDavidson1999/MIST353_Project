@@ -4,24 +4,28 @@ using WeatherDataAppAPI.Entities;
 using WeatherDataAppAPI.Repositories;
 
 namespace WeatherDataAppAPI.Controllers
+    [Route("api/[controller]")]
+    [ApiController]
 {
-	public class insertlocationcontroller : Controller
+	public class InsertLocationController : ControllerBase
 	{
-        private readonly InsertLocationServ InsertLocation;
-        public insertlocationcontroller(InsertLocationServ InsertLocation)
+        private readonly InsertLocationServ _insertLocationServ;
+
+        public InsertLocationController(InsertLocationServ insertLocationServ)
         {
-            this.InsertLocationServ = InsertLocation;
+            _insertLocationServ = insertLocationServ;
         }
 
-        [HttpGet("{city, state, country}")]
-        public async Task<bool<InsertLocation>> InsertLocationGetDetails(string city, string state, string country);
+        [HttpGet("{city}/{state}/{country}")]
+        public ActionResult<InsertLocation> InsertLocationGetDetails(string city, string state, string country)
         {
-            var LocationDetails = await InsertLocationServ.InsertLocationGetDetails(city, state, country);
-            if (LocationDetails == null)
+            var locationDetails = _insertLocationServ.InsertLocationGetDetails(city, state, country);
+            if (locationDetails == null)
             {
                 return NotFound();
             }
-            {
-                return LocationDetails;
-            }
+
+            return Ok(locationDetails);
+        }
+    }
 }

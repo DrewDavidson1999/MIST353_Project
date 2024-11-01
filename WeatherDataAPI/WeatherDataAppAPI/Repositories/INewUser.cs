@@ -1,9 +1,12 @@
-﻿
+﻿using WeatherDataAppAPI.Data;
+using WeatherDataAppAPI.Entities;
+using WeatherDataAppAPI.Repositories;
+
 namespace WeatherDataAppAPI.Repositories
 {
 	public interface INewUser
 	{
-        public Task<bool<NewUser>> InsertNewUserGetDetails(string userName, string email, string passwordHash);
+        public async Task<bool> InsertNewUserGetDetails(string userName, string email, string passwordHash);
 
 
     }

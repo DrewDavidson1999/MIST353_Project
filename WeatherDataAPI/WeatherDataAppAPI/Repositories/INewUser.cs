@@ -6,6 +6,7 @@ namespace WeatherDataAppAPI.Repositories
 {
 	public interface INewUser
 	{
+
         public async Task<bool> InsertNewUserGetDetails(string userName, string email, string passwordHash);
 
 

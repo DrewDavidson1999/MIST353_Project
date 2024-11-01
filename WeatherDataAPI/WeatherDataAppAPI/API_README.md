@@ -300,3 +300,80 @@ https://localhost:7085/api/WeatherDataDelete/99
 ]
 ```
 >>>>>>> 85992f6430bc6c0cb870c42f5bbdee16612b7a91
+
+## **Nathan Stryker APIs**
+### 1. ChangePassword API
+#### Purpose:
+The **ChangePW** API allows users to change their password. This API updates user data from the `ext_Users` table from the WeatherDataDB based on the userid and password input. This API accepts the input from the users in order for them to update their password to whatever they would like to.
+### Inputs:
+-**UserID**: ID of the user changing their password.
+  - **Type**: `int`
+  - **Required**: Yes
+  - **Description**: This value should be passed as a URL path parameter.
+  - **Example**: `1`
+-**PasswordHash**: Password of the user
+  - **Type**: `string`
+  - **Required**: Yes
+  - **Description**: This value should be passed as a URL path parameter.
+    
+####
+### Example Curl Request:
+```
+curl -X 'PUT' \
+  'https://localhost:7085/api/ChangePW/UpdatePassword' \
+  -d '{"current_password": "old_password", "new_password": "1234"}'
+```
+### Example Request URL:
+```
+https://localhost:7085/api/ChangePW/UpdatePassword
+```
+### Outputs:
+#### Success (200 OK):
+```
+ "message": "Password updated successfully"
+```
+#### Example Success Response:
+```
+[
+  {
+    "message": "Password updated successfully"
+  }
+]
+```
+### 2. ChangePreferredLocation API
+#### Purpose:
+The ChangePreferredLocation API allows users to update their preferred location. This API updates preferred location data into the `ext_UserPreferredLocations` table in the `WeatherDataDB` based on the input parameters. This enables users to change their preferred location so they can see the info they want on our website.
+### Inputs:
+- **UserID**: ID of the user changing their preferred location.
+  - **Type**: `int`
+  - **Required**: Yes
+  - **Description**: This value should be passed as a URL path parameter.
+  - **Example**: `235`
+- **Location**: The new preferred location
+  - Type: `string`
+  - Required: Yes
+  - Description: This value should be passes as a URL path parameter.
+  - Example: `San Antonio`
+
+### Example Curl Request:
+```
+curl -X 'PUT' \
+  'https://localhost:7085/api/ChangePreferredLocation/UpdatePreferredLocation'
+  -H 'Content-Type: application/json' \
+  -d '{
+        "location": "San Antonio, TX"
+      }'
+```
+### Example Request URL:
+```
+https://localhost:7085/api/ChangePreferredLocation/UpdatePreferredLocation
+```
+### Outputs:
+#### Success (200 OK):
+```
+    "Preferred Location updated successfully!"
+```
+#### Example Success Response:
+```
+"Preferred Location updated successfully!"
+```

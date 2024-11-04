@@ -12,14 +12,16 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<IChangePW, ChangePWServ>();
 builder.Services.AddScoped<IUpdatePreferredLocation, UpdatePreferredLocationServ>();
-builder.Services.AddDbContext<DBContextClass>();
+//builder.Services.AddDbContext<DBContextClass>();
 
 builder.Services.AddScoped<INewUser, NewUserServ>();
 builder.Services.AddScoped<IInsertLocation, InsertLocationServ>();
-builder.Services.AddDbContext<DBContextClass>();
+//builder.Services.AddDbContext<DBContextClass>();
 
 builder.Services.AddScoped<IWeatherDataAdd, WeatherDataAddServ>();
 builder.Services.AddScoped<IWeatherDataDelete, WeatherDataDeleteServ>();
+builder.Services.AddScoped<INewUser, NewUserServ>();
+builder.Services.AddScoped<IInsertLocation, InsertLocationServ>();
 builder.Services.AddDbContext<DBContextClass>();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

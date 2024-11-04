@@ -7,10 +7,16 @@ namespace WeatherDataAppAPI.Data
 {
 	public class DBContextClass : DbContext
 	{
-
-		public DBContextClass(DbContextOptions<DBContextClass> options) : base(options)
-		{ }
-		public DbSet<WeatherDataAdd> WeatherDataAdd { get; set; }
+        protected readonly IConfiguration Configuration;
+        public DBContextClass(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+        }
+        public DbSet<WeatherDataAdd> WeatherDataAdd { get; set; }
 		public DbSet<WeatherDataDelete> WeatherDataDelete { get; set; }
 
 		public DbSet<NewUser> NewUser { get; set; }

@@ -10,7 +10,9 @@ namespace WeatherDataAppAPI.Controllers
     public class NewUserController : ControllerBase
 
 	{
-        public NewUserController(NewUserServ newUserServ)
+        private INewUser _newUserServ;
+
+        public NewUserController(INewUser newUserServ)
         {
             _newUserServ = newUserServ;
         }

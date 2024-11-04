@@ -7,6 +7,7 @@ public class NewUser
 {
     public NewUser()
     { }
+    [Key]
         public int UserID { get; set; }
 
 

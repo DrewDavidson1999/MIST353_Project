@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace WeatherDataAppAPI.Data;
 
 public partial class ExtWeatherHistorical
 {
+    [Key]
     public int WeatherId { get; set; }
 
     public string Location { get; set; } = null!;

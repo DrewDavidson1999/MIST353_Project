@@ -6,7 +6,7 @@ namespace WeatherDataAppAPI.Entities
 {
 	public class WeatherDataDelete
 	{
-
+		[Key]
 		public int LocationID { get; set; }
 		
 

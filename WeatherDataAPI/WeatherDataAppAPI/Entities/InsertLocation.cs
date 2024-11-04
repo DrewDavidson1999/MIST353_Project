@@ -1,16 +1,16 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 
 namespace WeatherDataAppAPI.Entities;
 
-
+[Keyless]
 public class InsertLocation
 {
+
     public InsertLocation()
     { }
-       
-
     [StringLength(100)]
     public string City { get; set; }
 

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace WeatherDataAppAPI.Data;
 
 public partial class ExtUser
 {
+    [Key]
     public int UserId { get; set; }
 
     public string UserName { get; set; } = null!;

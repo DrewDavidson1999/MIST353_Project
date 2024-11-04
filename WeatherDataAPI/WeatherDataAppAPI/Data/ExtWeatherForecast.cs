@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace WeatherDataAppAPI.Data;
 
 public partial class ExtWeatherForecast
 {
+    [Key]
     public int ForecastId { get; set; }
 
     public string Region { get; set; } = null!;

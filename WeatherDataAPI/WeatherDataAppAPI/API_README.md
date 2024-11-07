@@ -122,7 +122,9 @@ https://localhost:7085/api/WeatherByLocation/AddWeatherForecast
     - `WindSpeed`: `double` - Wind speed.
     - `WeatherDescription`: `string` - Brief description of the weather.
     - `DateTime`: `DateTime` - Timestamp of the recorded weather data. 
-
+### Page Outline:
+- Page 3 will be the `GetWeatherByLocation` page. This page will allow users to input a city name and retrieve current weather data from the database. The page will display the following weather information for the specified city: location, temperature, humidity, wind speed, weather description, and the date/time the data was recorded. 
+- Page 4 will be the `AddWeatherForecast` page. This page will enable users to input forecast details and add a new weather forecast to the database using the AddWeatherForecast API. The page will have an interactive form where users can enter the region, forecast date, temperature, and a brief weather description. 
  
 ## Samantha Wilsons APIs
 ### 1. InsertNewUser API

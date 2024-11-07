@@ -126,6 +126,7 @@ https://localhost:7085/api/WeatherByLocation/AddWeatherForecast
  
 ## Samantha Wilsons APIs
 ### 1. InsertNewUser API
+### Page 1. This page allows new users to register for access to the Farmers Weather Platform. Here, users can sign up by providing a unique username, email, and a secure password. Once registered, users can log in to access personalized weather updates, forecasts, and other agricultural information.
 #### Purpose:
 The **InsertNewUser** API allows users to register a new user in the system. This API stores user information in the database and returns the details of the newly created user. It is designed to facilitate user registration for the web application.
 ### Inputs:
@@ -173,6 +174,7 @@ https://localhost:7085/api/NewUser/InsertNewUser/john_doe/john@example.com/hashe
 
 ```
 ### 2. InsertLocation API
+### Page 2. This page would enable users to add a new location (city, state, and country) to their profile or to track weather updates for specific areas. Using the InsertLocation API, the page would store the provided location information in the database, allowing users to customize the weather data they receive.
 #### Purpose:
 The **InsertLocation** API allows users to add a new location to the system. This API stores location information in the database and returns the details of the newly added location. It is designed to facilitate location registration for the web application.
 ### Inputs:

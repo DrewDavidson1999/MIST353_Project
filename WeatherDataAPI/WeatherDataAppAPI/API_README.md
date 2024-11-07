@@ -307,6 +307,7 @@ Pages 5 and 6 will be the historical data and the add and delete location APIs. 
 
 ## **Nathan Stryker APIs**
 ### 1. ChangePassword API
+### Page 7: This page will simply allow the user to change their password. 
 #### Purpose:
 The **ChangePW** API allows users to change their password. This API updates user data from the `ext_Users` table from the WeatherDataDB based on the userid and password input. This API accepts the input from the users in order for them to update their password to whatever they would like to.
 ### Inputs:
@@ -345,6 +346,7 @@ https://localhost:7085/api/ChangePW/UpdatePassword
 ]
 ```
 ### 2. ChangePreferredLocation API
+### Page 8: This page will display preferred location information. This is different from the home page as it will show more specific/detailed information on the preferred location of the user.
 #### Purpose:
 The ChangePreferredLocation API allows users to update their preferred location. This API updates preferred location data into the `ext_UserPreferredLocations` table in the `WeatherDataDB` based on the input parameters. This enables users to change their preferred location so they can see the info they want on our website.
 ### Inputs:

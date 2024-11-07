@@ -298,6 +298,7 @@ https://localhost:7085/api/WeatherDataDelete/99
   }
 ]
 ```
+Pages 5 and 6 will be the historical data and the add and delete location APIs. The historical data will provide data used from the API I found back in assignment two. The APIs will both be on the sam epage and will aloow you to add and delete locations from the database.
 >>>>>>> 85992f6430bc6c0cb870c42f5bbdee16612b7a91
 
 ## **Nathan Stryker APIs**

@@ -17,13 +17,12 @@ namespace WeatherDataAppAPI.Controllers
             _weatherRepository = weatherRepository;
         }
 
-        // Existing HTTP GET method to retrieve weather data by city
         [HttpGet("GetWeatherByCity/{city}")]
-        public ActionResult<IEnumerable<IWeatherData>> GetWeatherByCity(string city)
+        public ActionResult<IEnumerable<WeatherData>> GetWeatherByCity(string city)
         {
             try
             {
-                var result = _weatherRepository.GetCurrentWeatherByCity(city);
+                var result = _weatherRepository.GetCurrentWeatherByLocation(city);
                 if (result == null || !result.Any())
                 {
                     return NotFound($"Weather data for city '{city}' not found.");
@@ -36,7 +35,6 @@ namespace WeatherDataAppAPI.Controllers
             }
         }
 
-        // New HTTP POST method to add a new weather forecast
         [HttpPost("AddWeatherForecast")]
         public IActionResult AddWeatherForecast([FromBody] WeatherForecastRequest request)
         {
@@ -57,7 +55,6 @@ namespace WeatherDataAppAPI.Controllers
         }
     }
 
-    // Data Transfer Object for the forecast request payload
     public class WeatherForecastRequest
     {
         public required string Region { get; set; }
@@ -66,6 +63,7 @@ namespace WeatherDataAppAPI.Controllers
         public required string WeatherDescription { get; set; }
     }
 }
+
 
 
 

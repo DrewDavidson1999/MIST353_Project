@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Identity.Web;
 using WeatherDataAppAPI.Repositories;
 using WeatherDataAppAPI.Data;
-using WeatherDataAppAPI.Repositories; // Add this to reference your repository
+ // Add this to reference your repository
 
 
 var builder = WebApplication.CreateBuilder(args);

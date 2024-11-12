@@ -11,20 +11,16 @@ namespace WeatherDataAppAPI.Repositories
     {
         private readonly string _connectionString;
 
-        // Constructor to initialize the connection string
         public WeatherRepository(IConfiguration configuration)
         {
             _connectionString = configuration.GetConnectionString("DefaultConnection") ?? throw new ArgumentNullException(nameof(configuration));
         }
 
-        // Method to add a weather forecast using the stored procedure spAddWeatherForecast
         public void AddWeatherForecast(string region, DateTime forecastDate, double temperature, string weatherDescription)
         {
             using (var connection = new SqlConnection(_connectionString))
             {
-                connection.Open(); // Open the SQL connection
-
-                // Define the parameters to pass to the stored procedure
+                connection.Open();
                 var parameters = new
                 {
                     Region = region,
@@ -33,29 +29,24 @@ namespace WeatherDataAppAPI.Repositories
                     WeatherDescription = weatherDescription
                 };
 
-                // Execute the stored procedure using Dapper to insert the forecast
                 connection.Execute("spAddWeatherForecast", parameters, commandType: CommandType.StoredProcedure);
             }
         }
 
-        // Implement the method to get current weather data by city
-        public IEnumerable<IWeatherData> GetCurrentWeatherByCity(string city)
+        // Updated to return IEnumerable<WeatherData>
+        public IEnumerable<WeatherData> GetCurrentWeatherByLocation(string city)
         {
             using (var connection = new SqlConnection(_connectionString))
             {
-                connection.Open(); // Open the SQL connection
-
-                // Define the parameters to pass to the stored procedure or query
+                connection.Open();
                 var parameters = new { City = city };
 
-                // Execute a query to get current weather data by city using Dapper
-                string query = "SELECT Location, Temperature, Humidity, WindSpeed, WeatherDescription, DateTime FROM ext_Weather_Current WHERE Location = @City";
+                // Ensure this uses a stored procedure if required by your teacher
+                var weatherData = connection.Query<WeatherData>("spGetCurrentWeatherByLocation", parameters, commandType: CommandType.StoredProcedure);
 
-                // Query the database using Dapper
-                var weatherData = connection.Query<IWeatherData>(query, parameters);
-
-                return weatherData; // Return the retrieved weather data
+                return weatherData;
             }
         }
     }
 }
+

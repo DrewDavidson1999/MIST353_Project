@@ -1,6 +1,6 @@
 ﻿namespace WeatherDataAppAPI.Repositories
 {
-    public class IWeatherData
+    public interface IWeatherData
     {
         public string? Location { get; set; } // Nullable string for location
         public double? Temperature { get; set; } // Nullable double for temperature

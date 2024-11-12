@@ -14,10 +14,9 @@
 6. The **GetWeatherDelete** API deletes a location by primary key from the _extLocations table. The API asks for a key and then it removes that from the table. The API is based off spPreLocDelete.
 
 ### Nathan Stryker's 2 pages:
-### 1. ChangePassword API
 7. This page will simply allow the user to change their password. 
 8. This page will display preferred location information. This is different from the home page as it will show more specific/detailed information on the preferred location of the user.
-<br />
+----------------------------------------------------------------------------------------------------------------------------------------
 
 ## **Drew Davidson APIs**
 ### 1. GetWeatherByLocation API

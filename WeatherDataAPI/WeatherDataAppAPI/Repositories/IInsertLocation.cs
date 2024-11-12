@@ -6,6 +6,6 @@ namespace WeatherDataAppAPI.Repositories
 {
     public interface IInsertLocation
     {
-        Task<List<InsertLocation>> InsertLocationGetDetails(string city, string state, string country);
+        Task<int> InsertLocationGetDetails(string city, string state, string country);
     }
 }

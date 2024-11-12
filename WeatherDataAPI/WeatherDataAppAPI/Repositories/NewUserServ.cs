@@ -15,17 +15,20 @@ namespace WeatherDataAppAPI.Repositories
         {
             _dbContextClass = dBContextClass;
         }
-        public async Task<List<NewUser>> InsertNewUserGetDetails(string userName, string email, string passwordHash)
+        public async Task<int> InsertNewUserGetDetails(string userName, string email, string passwordHash)
         {
-            var parameter = new List<SqlParameter>();
+            var parameters = new List<SqlParameter>
             {
-                var param2 = new SqlParameter("@UserName", userName);
-                var param3 = new SqlParameter("@Email", email);
-                var param4 = new SqlParameter("@PasswordHash", passwordHash);
+                new SqlParameter("@UserName", userName),
+                new SqlParameter("@Email", email),
+                new SqlParameter("@PasswordHash", passwordHash)
             };
 
-            var InsertNewUsers = await _dbContextClass.NewUser.FromSqlRaw("EXEC InsertNewUser @UserName, @Email, @PasswordHash", parameter.ToArray()).ToListAsync();
-            return InsertNewUsers;
+            // Execute the stored procedure and get the number of affected rows
+            var result = await _dbContextClass.Database.ExecuteSqlRawAsync("EXEC InsertNewUser @UserName, @Email, @PasswordHash", parameters.ToArray());
+
+            // Return the number of affected rows
+            return result;
         }
     }
 }

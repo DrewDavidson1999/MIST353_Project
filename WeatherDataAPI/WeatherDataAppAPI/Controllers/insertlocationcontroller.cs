@@ -10,23 +10,24 @@ namespace WeatherDataAppAPI.Controllers
 
 	public class InsertLocationController : ControllerBase
 	{
-        private readonly InsertLocationServ _insertLocationServ;
+        private readonly IInsertLocation _insertLocationServ;
 
-        public InsertLocationController(InsertLocationServ insertLocationServ)
+        public InsertLocationController(IInsertLocation insertLocationServ)
         {
             _insertLocationServ = insertLocationServ;
         }
 
-        [HttpGet("{city}/{state}/{country}")]
-        public ActionResult<InsertLocation> InsertLocationGetDetails(string city, string state, string country)
+        [HttpPost("{city}/{state}/{country}")]
+        public async Task<ActionResult<int>> InsertLocationGetDetails(string city, string state, string country)
         {
-            var locationDetails = _insertLocationServ.InsertLocationGetDetails(city, state, country);
-            if (locationDetails == null)
+            var result = await _insertLocationServ.InsertLocationGetDetails(city, state, country);
+
+            if (result <= 0)
             {
-                return NotFound();
+                return BadRequest("Failed to insert location.");
             }
 
-            return Ok(locationDetails);
+            return Ok(result);
         }
     }
 }

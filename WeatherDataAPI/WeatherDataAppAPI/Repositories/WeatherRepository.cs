@@ -16,7 +16,7 @@ namespace WeatherDataAppAPI.Repositories
             _connectionString = configuration.GetConnectionString("DefaultConnection") ?? throw new ArgumentNullException(nameof(configuration));
         }
 
-        public void AddWeatherForecast(string region, DateTime forecastDate, double temperature, string weatherDescription)
+        public bool AddWeatherForecast(string region, DateTime forecastDate, double temperature, string weatherDescription)
         {
             using (var connection = new SqlConnection(_connectionString))
             {
@@ -29,9 +29,14 @@ namespace WeatherDataAppAPI.Repositories
                     WeatherDescription = weatherDescription
                 };
 
-                connection.Execute("spAddWeatherForecast", parameters, commandType: CommandType.StoredProcedure);
+                // Execute the stored procedure and get the number of rows affected
+                int rowsAffected = connection.Execute("spAddWeatherForecast", parameters, commandType: CommandType.StoredProcedure);
+
+                // Return true if one or more rows were affected
+                return rowsAffected > 0;
             }
         }
+
 
         // Updated to return IEnumerable<WeatherData>
         public IEnumerable<WeatherData> GetCurrentWeatherByLocation(string city)

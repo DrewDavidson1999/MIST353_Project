@@ -15,18 +15,20 @@ namespace WeatherDataAppAPI.Repositories
             _dbContextClass = dBContextClass;
         }
 
-        public async Task<List<InsertLocation>> InsertLocationGetDetails(string city, string state, string country)
+        public async Task<int> InsertLocationGetDetails(string city, string state, string country)
         {
-            var parameters = new List<SqlParameter>();
+            var parameters = new List<SqlParameter>
             {
-                var param2 = new SqlParameter("@City", city);
-                var param3 = new SqlParameter("@State", state);
-                var param4 = new SqlParameter("@Country", country);
+                new SqlParameter("@City", city),
+                new SqlParameter("@State", state),
+                new SqlParameter("@Country", country)
             };
 
-            var locations = await _dbContextClass.InsertLocation.FromSqlRaw("EXEC InsertNewLocation @City, @State, @Country", parameters.ToArray()).ToListAsync();
-            return locations;
+            // Execute the stored procedure and get the number of affected rows.
+            var result = await _dbContextClass.Database.ExecuteSqlRawAsync("EXEC InsertNewLocation @City, @State, @Country", parameters.ToArray());
+
+            // Return the number of affected rows.
+            return result;
         }
     }
 }
-

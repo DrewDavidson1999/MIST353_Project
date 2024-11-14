@@ -1,5 +1,23 @@
 # Weather Application API Documentation
 
+## Description of 8 Pages
+### Drew Davidson's 2 pages:
+1. The first page will use the GetWeatherByLocation API to enable users to view current weather data for a specified city. Users can enter a city name to retrieve up-to-date weather information from the ext_Weather_Current table in the WeatherDataDB. This page will display detailed weather metrics, including temperature, humidity, wind speed, and a brief weather description.
+2. The second page will use the AddWeatherForecast API to allow users to submit a new weather forecast for a specific region. The API takes parameters like region, forecast date, temperature, and a brief weather description to insert forecast data into the ext_Weather_Forecasts table in the WeatherDataDB.
+
+### Samantha Wilson's 2 pages: 
+3. This page allows new users to register for access to the Farmers Weather Platform. Here, users can sign up by providing a unique username, email, and a secure password. Once registered, users can log in to access personalized weather updates, forecasts, and other agricultural information.
+4. This page would enable users to add a new location (city, state, and country) to their profile or to track weather updates for specific areas. Using the InsertLocation API, the page would store the provided location information in the database, allowing users to customize the weather data they receive.
+
+### Joseph Baumgart's 2 pages:
+5. The **GetWeatherAdd** API inserts a new location into the _extLocations table. The API asks for a city, state, and LocationID. The LocationID autoincriments so it is not truly necessary. The API is based off spPreLocAdd.
+6. The **GetWeatherDelete** API deletes a location by primary key from the _extLocations table. The API asks for a key and then it removes that from the table. The API is based off spPreLocDelete.
+
+### Nathan Stryker's 2 pages:
+7. This page will simply allow the user to change their password. 
+8. This page will display preferred location information. This is different from the home page as it will show more specific/detailed information on the preferred location of the user.
+----------------------------------------------------------------------------------------------------------------------------------------
+
 ## **Drew Davidson APIs**
 ### 1. GetWeatherByLocation API
 #### Purpose:

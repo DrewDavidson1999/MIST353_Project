@@ -9,7 +9,7 @@ namespace WeatherDataAppAPI.Controllers
     [ApiController]
     public class NewUserController : ControllerBase
 
-	{
+    {
         private readonly INewUser _newUserServ;
 
         public NewUserController(INewUser newUserServ)
@@ -17,8 +17,8 @@ namespace WeatherDataAppAPI.Controllers
             _newUserServ = newUserServ;
         }
 
-        [HttpPost("{userName}/{email}/{passwordHash}")]
-        public async Task<ActionResult<int>> InsertNewUserGetDetails(string userName, string email, string passwordHash)
+        [HttpPost("InsertNewUser/{userName}/{email}/{passwordHash}")]
+        public async Task<ActionResult> InsertNewUserGetDetails(string userName, string email, string passwordHash)
         {
             var result = await _newUserServ.InsertNewUserGetDetails(userName, email, passwordHash);
 
@@ -27,7 +27,15 @@ namespace WeatherDataAppAPI.Controllers
                 return BadRequest("Failed to insert new user.");
             }
 
-            return Ok(result);
+            // Construct the response object
+            var createdUser = new
+            {
+                userName,
+                email
+            };
+
+            // Return 201 Created with user details in the response body
+            return CreatedAtAction(nameof(InsertNewUserGetDetails), new { userName, email, passwordHash }, createdUser);
         }
     }
 }

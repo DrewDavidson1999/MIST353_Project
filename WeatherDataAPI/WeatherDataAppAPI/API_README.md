@@ -166,17 +166,17 @@ Example: john@example.com
 Type: string
 Required: Yes
 Description: This value should be passed as a URL path parameter. Ensure the password is securely hashed before sending.
-Example: Password123
+Example: 1234
 ### Example Curl Request:
 ```
 curl -X 'POST' \
-  'https://localhost:7085/api/NewUser/InsertNewUser/john_doe/john@example.com/hashed_password_value' \
-  -H 'accept: application/json'
-
+  'https://localhost:7085/api/NewUser/InsertNewUser/john_doe/john%40example.com/1234' \
+  -H 'accept: */*' \
+  -d ''
 ```
 ### Example Request URL:
 ```
-https://localhost:7085/api/NewUser/InsertNewUser/john_doe/john@example.com/hashed_password_value
+https://localhost:7085/api/NewUser/InsertNewUser/john_doe/john%40example.com/1234
 
 ```
 ### Outputs:
@@ -218,13 +218,13 @@ Example: USA
 ### Example Curl Request:
 ```
 curl -X 'POST' \
-  'https://localhost:7085/api/Location/InsertLocation/Sacramento/California/USA' \
-  -H 'accept: application/json'
-
+  'https://localhost:7085/api/InsertLocation/Sacramento%20/California/USA' \
+  -H 'accept: */*' \
+  -d ''
 ```
 ### Example Request URL:
 ```
-https://localhost:7085/api/Location/InsertLocation/Sacramento/California/USA
+https://localhost:7085/api/InsertLocation/Sacramento%20/California/USA
 
 ```
 ### Outputs:

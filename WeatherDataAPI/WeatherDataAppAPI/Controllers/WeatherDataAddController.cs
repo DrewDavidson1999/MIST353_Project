@@ -17,7 +17,7 @@ namespace WeatherDataAppAPI.Controllers
 			this.weatherDataAdd = weatherDataAdd;
 		}
 
-		[HttpGet()]
+		[HttpPost("{city}/{state}/{country}")]
 		public async Task<List<WeatherDataAdd>> PreLocAddGetDetails(string city, string state, string country)
 		{
 			var PreLocAddDetails= await weatherDataAdd.PreLocAddGetDetails(city, state, country);

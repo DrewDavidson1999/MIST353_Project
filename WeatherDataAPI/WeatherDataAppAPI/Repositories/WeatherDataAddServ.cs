@@ -15,16 +15,17 @@ namespace WeatherDataAppAPI.Repositories
 		{
 			_dbContextClass = dBContextClass;
 		}
-		public async Task<List<WeatherDataAdd>> PreLocAddGetDetails( string city, string state, string country)
+		public async Task<List<WeatherDataAdd>> PreLocAddGetDetails(string city, string state, string country)
 		{
 
 			var parameter = new List<SqlParameter>();
 
+			
 			var param2 = new SqlParameter("@City", city);
 			var param3 = new SqlParameter("@State", state);
 			var param4 = new SqlParameter("@Country", country);
 
-			var PreLocAdd = await Task.Run(() => _dbContextClass.WeatherDataAdd.FromSqlRaw("exec spPreLocAdd @City, @State, @Country ", param2, param3, param4).ToListAsync());
+			var PreLocAdd = await Task.Run(() => _dbContextClass.WeatherDataAdd.FromSqlRaw("exec spPreLocAdd @City, @State, @Country ",param2, param3, param4).ToList());
 			return PreLocAdd;
 		}
 	}

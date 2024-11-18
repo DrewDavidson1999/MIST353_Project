@@ -9,7 +9,7 @@ namespace WeatherDataAppAPI.Repositories
 	public interface IWeatherDataAdd
 	{
 
-		public Task<List<WeatherDataAdd>> PreLocAddGetDetails( string city, string state, string country);
+		public Task<List<WeatherDataAdd>> PreLocAddGetDetails(string city, string state, string country);
 
 	}
 }

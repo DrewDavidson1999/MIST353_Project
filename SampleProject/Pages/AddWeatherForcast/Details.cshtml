@@ -1,0 +1,43 @@
+﻿@page
+@model SampleProject.Pages.AddWeatherForcast.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ExtWeatherForecast</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ExtWeatherForecast.Region)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ExtWeatherForecast.Region)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ExtWeatherForecast.ForecastDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ExtWeatherForecast.ForecastDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ExtWeatherForecast.Temperature)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ExtWeatherForecast.Temperature)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ExtWeatherForecast.WeatherDescription)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ExtWeatherForecast.WeatherDescription)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ExtWeatherForecast.ForecastId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

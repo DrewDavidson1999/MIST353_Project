@@ -1,0 +1,59 @@
+﻿@page
+@model SampleProject.Pages.WeatherCurrent.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ExtWeatherCurrent</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ExtWeatherCurrent.Location" class="control-label"></label>
+                <input asp-for="ExtWeatherCurrent.Location" class="form-control" />
+                <span asp-validation-for="ExtWeatherCurrent.Location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExtWeatherCurrent.Temperature" class="control-label"></label>
+                <input asp-for="ExtWeatherCurrent.Temperature" class="form-control" />
+                <span asp-validation-for="ExtWeatherCurrent.Temperature" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExtWeatherCurrent.Humidity" class="control-label"></label>
+                <input asp-for="ExtWeatherCurrent.Humidity" class="form-control" />
+                <span asp-validation-for="ExtWeatherCurrent.Humidity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExtWeatherCurrent.WindSpeed" class="control-label"></label>
+                <input asp-for="ExtWeatherCurrent.WindSpeed" class="form-control" />
+                <span asp-validation-for="ExtWeatherCurrent.WindSpeed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExtWeatherCurrent.WeatherDescription" class="control-label"></label>
+                <input asp-for="ExtWeatherCurrent.WeatherDescription" class="form-control" />
+                <span asp-validation-for="ExtWeatherCurrent.WeatherDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExtWeatherCurrent.DateTime" class="control-label"></label>
+                <input asp-for="ExtWeatherCurrent.DateTime" class="form-control" />
+                <span asp-validation-for="ExtWeatherCurrent.DateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

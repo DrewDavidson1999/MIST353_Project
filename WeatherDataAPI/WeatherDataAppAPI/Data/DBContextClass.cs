@@ -18,6 +18,7 @@ namespace WeatherDataAppAPI.Data
         }
         public DbSet<WeatherDataAdd> WeatherDataAdd { get; set; }
 		public DbSet<WeatherDataDelete> WeatherDataDelete { get; set; }
+		public DbSet<UserDelete> UserDelete { get; set; }
 
 		public DbSet<NewUser> NewUser { get; set; }
 		public DbSet<InsertLocation> InsertLocation { get; set; }

@@ -27,6 +27,7 @@
                 <th>Wind Speed</th>
                 <th>Weather Description</th>
                 <th>Date/Time</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -39,6 +40,11 @@
                     <td>@item.WindSpeed</td>
                     <td>@item.WeatherDescription</td>
                     <td>@item.DateTime</td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@item.WeatherId">Edit</a> |
+                        <a asp-page="./Details" asp-route-id="@item.WeatherId">Details</a> |
+                        <a asp-page="./Delete" asp-route-id="@item.WeatherId">Delete</a>
+                    </td>
                 </tr>
             }
         </tbody>
@@ -52,4 +58,3 @@ else
 {
     <p>Enter a city name to search for weather data.</p>
 }
-

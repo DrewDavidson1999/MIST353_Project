@@ -36,17 +36,17 @@
 - The page will display a success message upon successful submission of a weather forcast from a user, or an error message.
 
 ## Joey Baumgart Razor Page Documentation  
-### Razor Page 1 - Delete Location API
+### Razor Page 1 - Delete Location
 - **Location**: `Pages/LDelete` 
-- Description: 
-- API Used: `sp` 
+- Description: The Location Delete Razor page is used to delete one of the loctions from the database. The Razor page displays the locations in the database and allows you to remove the specific location.
+- API Used: `spPreLocAdd` 
 - Database Interaction: 
 - Functionality:
 
-### Razor Page 2 - Delete User API
+### Razor Page 2 - Delete User
 - **Location**: `Pages/UDelete` 
-- Description: 
-- API Used: `sp` 
+- Description: The User Delete Razor page is used to delete a user from the user table in the database. The Razor page allows you to view all the users in the database and delete one of the users from the page.
+- API Used: `spUserDelete` 
 - Database Interaction: 
 - Functionality:
 

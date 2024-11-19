@@ -1,76 +1,160 @@
 ﻿@page
 @model SampleProject.Pages.WeatherDataHomePageModel
-@{
-}
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <title>Weather for Farmers</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        body {
+            background: url('https://ten-four.com/wp-content/uploads/2020/01/iStock-937010674crop-2048x781.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+        }
+
+        .btn-custom {
+            background-color: #28a745;
+            color: white;
+        }
+
+        #weather-results {
+            display: none;
+        }
+    </style>
 </head>
 
-<body background="https://ten-four.com/wp-content/uploads/2020/01/iStock-937010674crop-2048x781.jpg"
-      style="background-repeat: no-repeat; background-size:cover;">
-    <div class="header text-center">
-        <h1><b>Weather for Farmers</b></h1>
-    </div>
+<body>
+    <!-- Header Section -->
+    <header class="text-center py-4">
+        <h1 class="text-warning"><strong>Weather for Farmers</strong></h1>
+        <p class="lead">Get real-time weather data and forecasts tailored for agricultural needs</p>
+    </header>
 
-    <h2 style="color:white;background-color:seagreen;font-family:'Times New Roman';text-align:center; font-size:38px">
-        Search for weather conditions below!
-    </h2>
-
-    <div class="search-container">
-        <div class="card">
-            <form id="weather-form">
-                <div class="searchbar">
-                    <input type="text" class="form-control" id="search-bar" placeholder="Enter City Name" aria-label="City Name" aria-describedby="button-search">
-                    <button class="btn btn-outline-secondary" type="submit" id="button-search">Search</button>
+    <!-- Search by City Section -->
+    <div class="container">
+        <div class="card shadow p-4">
+            <h3 class="text-center text-success">Search for Weather by City</h3>
+            <form id="city-search-form">
+                <div class="input-group">
+                    <input type="text" id="city-input" class="form-control" placeholder="Enter city name">
+                    <button type="submit" class="btn btn-custom">Search</button>
                 </div>
             </form>
         </div>
+    </div>
 
-        <div id="weather-display" class="card">
-            <h1 class="city">Weather in Dallas</h1>
-            <h2 class="temp">73°F</h2>
-            <div class="flex">
-                <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
-                <div class="description">Slightly Cloudy</div>
-            </div>
-            <div class="humidity">Humidity: 15%</div>
-            <div class="wind">Wind speed: 3.2 km/h</div>
+    <!-- Display Weather Results -->
+    <div class="container mt-4">
+        <div id="weather-results" class="card shadow p-4">
+            <h4 class="text-center" id="city-name"></h4>
+            <p class="text-center" id="temperature"></p>
+            <p class="text-center" id="description"></p>
+            <p class="text-center" id="humidity"></p>
+            <p class="text-center" id="wind-speed"></p>
         </div>
     </div>
 
-    <div class="container">
-        <h5 style="font-size: 22px; color: yellow;">Find your location</h5>
-        <p style="font-size: 22px; color: yellow;">Click here to get your coordinates:</p>        
-        <button class="btn btn-primary" onclick="getLocation()">Get your location</button>
-        <p id="location" style="font-size: 22px; color: yellow;"></p>
+    <!-- Search by Current Location Section -->
+    <div class="container mt-4">
+        <div class="card shadow p-4">
+            <h3 class="text-center text-info">Access Historical Weather Data Near Your Location</h3>
+            <button id="location-button" class="btn btn-custom w-100">Find Your Location</button>
+            <p id="location-result" class="text-center mt-3"></p>
+        </div>
     </div>
 
     <script>
-        document.getElementById("weather-form").addEventListener("submit", function (event) {
-            event.preventDefault(); 
-            const city = document.getElementById("search-bar").value;
-            alert("You searched for: " + city); 
-            
+        // Display Weather Results
+        const displayWeather = (data) => {
+            document.getElementById('weather-results').style.display = 'block';
+            document.getElementById('city-name').textContent = `Weather in ${data.location}`;
+            document.getElementById('temperature').textContent = `Temperature: ${data.temperature}°F`;
+            document.getElementById('description').textContent = `Condition: ${data.weatherDescription}`;
+            document.getElementById('humidity').textContent = `Humidity: ${data.humidity}%`;
+            document.getElementById('wind-speed').textContent = `Wind Speed: ${data.windSpeed} km/h`;
+        };
+
+        // Search by City
+        document.getElementById('city-search-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const city = document.getElementById('city-input').value.trim();
+
+            if (!city) {
+                alert('Please enter a city name.');
+                return;
+            }
+
+            try {
+                const response = await fetch(`https://localhost:7085/api/WeatherByLocation/GetWeatherByCity/${city}`);
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data.length > 0) {
+                        displayWeather(data[0]);
+                    } else {
+                        alert('No weather data found for this city.');
+                    }
+                } else {
+                    alert('Error fetching weather data. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Could not retrieve weather data. Try again later.');
+            }
         });
 
-        
-        const locationDisplay = document.getElementById("location");
+        // Get Current Location
+        document.getElementById('location-button').addEventListener('click', async () => {
+            const locationResult = document.getElementById('location-result');
+            locationResult.textContent = 'Fetching your location...';
 
-        function getLocation() {
             if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-            } else {
-                locationDisplay.innerHTML = "Geolocation is not supported by this browser.";
-            }
-        }
+                navigator.geolocation.getCurrentPosition(async (position) => {
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
 
-        function showPosition(position) {
-            locationDisplay.innerHTML = "Latitude: " + position.coords.latitude +
-                "<br>Longitude: " + position.coords.longitude;
-        }
+                    try {
+                        const geoResponse = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`);
+                        if (geoResponse.ok) {
+                            const geoData = await geoResponse.json();
+                            const city = geoData.address.city || geoData.address.town || geoData.address.village || 'Unknown';
+
+                            locationResult.textContent = `Your Location: ${city}`;
+
+                            // Fetch weather for the detected city
+                            const weatherResponse = await fetch(`/api/WeatherByLocation/GetWeatherByCity/${city}`);
+                            if (weatherResponse.ok) {
+                                const weatherData = await weatherResponse.json();
+                                if (weatherData.length > 0) {
+                                    displayWeather(weatherData[0]);
+                                } else {
+                                    alert('No weather data found for your location.');
+                                }
+                            }
+                        } else {
+                            locationResult.textContent = 'Could not determine location.';
+                        }
+                    } catch (error) {
+                        console.error('Error:', error);
+                        locationResult.textContent = 'Error fetching weather data.';
+                    }
+                });
+            } else {
+                locationResult.textContent = 'Geolocation is not supported by your browser.';
+            }
+        });
     </script>
 </body>
+

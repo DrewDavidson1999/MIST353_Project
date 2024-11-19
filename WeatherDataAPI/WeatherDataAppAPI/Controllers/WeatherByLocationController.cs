@@ -22,10 +22,16 @@ namespace WeatherDataAppAPI.Controllers
         {
             try
             {
-                var result = _weatherRepository.GetCurrentWeatherByLocation(city);
+                if (string.IsNullOrWhiteSpace(city))
+                {
+                    return BadRequest("City name cannot be empty or whitespace.");
+                }
+
+                var trimmedCity = city.Trim(); // Trim leading/trailing spaces
+                var result = _weatherRepository.GetCurrentWeatherByLocation(trimmedCity);
                 if (result == null || !result.Any())
                 {
-                    return NotFound($"Weather data for city '{city}' not found.");
+                    return NotFound($"Weather data for city '{trimmedCity}' not found.");
                 }
                 return Ok(result);
             }
@@ -45,8 +51,15 @@ namespace WeatherDataAppAPI.Controllers
 
             try
             {
-                _weatherRepository.AddWeatherForecast(request.Region, request.ForecastDate, request.Temperature, request.WeatherDescription);
-                return Ok("Weather forecast added successfully.");
+                var success = _weatherRepository.AddWeatherForecast(request.Region, request.ForecastDate, request.Temperature, request.WeatherDescription);
+                if (success)
+                {
+                    return Ok("Weather forecast added successfully.");
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status500InternalServerError, "Failed to add weather forecast.");
+                }
             }
             catch (Exception ex)
             {
@@ -63,6 +76,7 @@ namespace WeatherDataAppAPI.Controllers
         public required string WeatherDescription { get; set; }
     }
 }
+
 
 
 

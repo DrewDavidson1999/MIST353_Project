@@ -1,0 +1,55 @@
+﻿@page
+@model SampleProject.Pages.WeatherCurrent.SearchModel
+
+@{
+    ViewData["Title"] = "Search Weather";
+}
+
+<h1>Search Weather</h1>
+
+<!-- Search Form -->
+<form method="get" class="mb-4">
+    <div class="input-group">
+        <input type="text" name="City" class="form-control" placeholder="Enter city name" value="@Model.City" />
+        <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+</form>
+
+<!-- Display Results -->
+@if (Model.ExtWeatherCurrent != null && Model.ExtWeatherCurrent.Any())
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Location</th>
+                <th>Temperature</th>
+                <th>Humidity</th>
+                <th>Wind Speed</th>
+                <th>Weather Description</th>
+                <th>Date/Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.ExtWeatherCurrent)
+            {
+                <tr>
+                    <td>@item.Location</td>
+                    <td>@item.Temperature</td>
+                    <td>@item.Humidity</td>
+                    <td>@item.WindSpeed</td>
+                    <td>@item.WeatherDescription</td>
+                    <td>@item.DateTime</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else if (!string.IsNullOrEmpty(Model.City))
+{
+    <p>No weather data found for "@Model.City".</p>
+}
+else
+{
+    <p>Enter a city name to search for weather data.</p>
+}
+

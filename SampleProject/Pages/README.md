@@ -42,6 +42,7 @@
 - API Used: `spPreLocAdd` API
 - Database Interaction: This deletes locations by ID from the ext_Locations table in WeatherDataDB.
 - Functionality: The users can easily delete a location from the database and can easily access the page from the home page of the application. The API also displays an error message that will let the user know if the ID does not exist.
+  - LocationID is used to delete all data for that datarow in the ext_Locations table corresponding to the LocationID.
 
 ### Razor Page 2 - Delete User
 - **Location**: `Pages/UDelete` 
@@ -49,6 +50,7 @@
 - API Used: `UDelete` API
 - Database Interaction: This deletes users by ID from the ext_User table in the WeatherDataDB.
 - Functionality: The users can easily delete a user from the database and can easily access the page from the home page of the application. The API also displays an error message that will let the user know if the ID does not exist.
+  - UserID is used to delete all data for that datarow in the ext_User table corresponding to the UserID.
 
 
 ## `put your name` Razor Page Documentation  

@@ -36,15 +36,15 @@
 - The page will display a success message upon successful submission of a weather forcast from a user, or an error message.
 
 ## Joey Baumgart Razor Page Documentation  
-### Razor Page 1 - 
-- **Location**: `Pages/` 
+### Razor Page 1 - Delete Location API
+- **Location**: `Pages/LDelete` 
 - Description: 
 - API Used: `sp` 
 - Database Interaction: 
 - Functionality:
 
-### Razor Page 2 - 
-- **Location**: `Pages/` 
+### Razor Page 2 - Delete User API
+- **Location**: `Pages/UDelete` 
 - Description: 
 - API Used: `sp` 
 - Database Interaction: 

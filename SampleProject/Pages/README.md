@@ -41,14 +41,14 @@
 - Description: The Location Delete Razor page is used to delete one of the loctions from the database. The Razor page displays the locations in the database and allows you to remove the specific location.
 - API Used: `spPreLocAdd` API
 - Database Interaction: This deletes locations by ID from the ext_Locations table in WeatherDataDB.
-- Functionality:
+- Functionality: The users can easily delete a location from the database and can easily access the page from the home page of the application. The API also displays an error message that will let the user know if the ID does not exist.
 
 ### Razor Page 2 - Delete User
 - **Location**: `Pages/UDelete` 
 - Description: The User Delete Razor page is used to delete a user from the user table in the database. The Razor page allows you to view all the users in the database and delete one of the users from the page.
 - API Used: `UDelete` API
 - Database Interaction: This deletes users by ID from the ext_User table in the WeatherDataDB.
-- Functionality:
+- Functionality: The users can easily delete a user from the database and can easily access the page from the home page of the application. The API also displays an error message that will let the user know if the ID does not exist.
 
 
 ## `put your name` Razor Page Documentation  

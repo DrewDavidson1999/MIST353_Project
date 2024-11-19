@@ -6,7 +6,7 @@
 - API Used: `GetWeatherByLocation` API, integrated using backend C#.
 - Database Interaction: Pulls data from the `Ext_Weather_Current` table in the `WeatherDataDB` database.
 - Functionality: Users enter a city name in the search bar on the page. Then the user's input is sent to the `GetWeatherByLocation` API, which retrieves all matching weather forecast information, including:
--- Temperature
+  - Temperature
 -- Humidity
 -- Wind Speed
 -- A weather description

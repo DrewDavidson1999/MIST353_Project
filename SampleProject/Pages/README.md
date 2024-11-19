@@ -3,7 +3,11 @@
 
 ## Drew Davidson's Razor Page Documentation  
 ### Razor Page 1 - Get Current Weather by City 
-- **Location**: `Pages/WeatherCurrent` 
+- **Location**: `Pages/WeatherCurrent`
+- Contains multiple `.cshtml` files for CRUD operations:
+  - `Search.cshtml`: Main search page for viewing weather forcast data by specific city.
+  - `Create.cshtml`: Allows an option for a user to create a new weather forcast entry, after they search for an existing forcast.
+  - `Edit.cshtml`, `Details.cshtml`, `Delete.cshtml`: Supporting CRUD operation pages, that allow a user to modify existing weather forcasts after the initial search. 
 - Description: This Razor page allows users to search for current weather conditions by a specific city. Users enter the city name in the search bar, and the page then displays all historical weather data for that location. The page will display detailed weather data including temperature, humidity, wind speed, weather description, and forecast date/time.
 - API Used: `spGetCurrentWeatherByLocation` API, integrated using backend C#.
 - Database Interaction: Pulls data from the `Ext_Weather_Current` table in the `WeatherDataDB` database.
@@ -17,6 +21,9 @@
 
 ### Razor Page 2 - Add Weather Forcast 
 - **Location**: `Pages/AddWeatherForcast` 
+- Contains multiple `.cshtml` files for CRUD operations:
+  - `Create.cshtml`: Main page for adding a new weather forecast.
+  - `Edit.cshtml`, `Details.cshtml`, and `Delete.cshtml`: Supporting CRUD operation pages, that allow a user to modify existing weather forcasts. 
 - Description: This Razor page allows users to add a new weather forecast for a specific region. Users can input details such as the region name, forecast date, temperature, and a brief weather description through an interactive form.
 - API Used: `spAddWeatherForecast` API, integrated using backend C#.
 - Database Interaction: Inserts data into the Ext_Weather_Forecasts table in the WeatherDataDB database.

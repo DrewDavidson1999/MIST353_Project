@@ -35,6 +35,22 @@
 - Once the user submits the new weather forcast, the data is sent to the `AddWeatherForecast` API, which validates and stores the forecast in the `ext_Weather_Forcasts` table in the database .
 - The page will display a success message upon successful submission of a weather forcast from a user, or an error message.
 
+## Joey Baumgart Razor Page Documentation  
+### Razor Page 1 - 
+- **Location**: `Pages/` 
+- Description: 
+- API Used: `sp` 
+- Database Interaction: 
+- Functionality:
+
+### Razor Page 2 - 
+- **Location**: `Pages/` 
+- Description: 
+- API Used: `sp` 
+- Database Interaction: 
+- Functionality:
+
+
 ## `put your name` Razor Page Documentation  
 ### Razor Page 1 - 
 - **Location**: `Pages/` 

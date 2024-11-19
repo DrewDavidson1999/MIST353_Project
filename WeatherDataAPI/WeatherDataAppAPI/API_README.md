@@ -405,3 +405,6 @@ https://localhost:7085/api/ChangePreferredLocation/UpdatePreferredLocation
 ```
 ### Sources
 -**ChatGPT**: I used ChatGPT for my Curl info, asking it to write me Curl requests and responses based on the function of my API. I also used it for a simple formatting issue in one of my APIs.
+
+## README.md file for Assignment 5: Razor Pages
+Click the link to navigate: [Razor Pages README.md File](SampleProject/Pages/README.md).

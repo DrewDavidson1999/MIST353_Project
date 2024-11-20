@@ -51,6 +51,23 @@
 - Database Interaction: This deletes users by ID from the ext_User table in the WeatherDataDB.
 - Functionality: The users can easily delete a user from the database and can easily access the page from the home page of the application. The API also displays an error message that will let the user know if the ID does not exist.
   - UserID is used to delete all data for that datarow in the ext_User table corresponding to the UserID.
+ 
+## Nathan Stryker's Razor Page Documentation  
+### Razor Page 1 - Edit Password
+- **Location**: `Pages/Password`
+- Contains multiple `.cshtml` files for CRUD operations:
+  - `Create.cshtml`: Allows an option for a user to create a new account for themselves
+  - `Edit.cshtml`, `Details.cshtml`, `Delete.cshtml`: Supporting CRUD operation pages, that allow a user to modify their password, view it, or delete their account
+- Description: This Razor page allows users to see their account information, while having the primary function of editing their password. However, they are also able to delete and view their account information from this page.
+- API Used: `spChangePassword` API, integrated using backend C#.
+- Database Interaction: Pulls data from the `Ext_Weather_Current` table in the `WeatherDataDB` database.
+- Functionality: Users enter a city name in the search bar on the page. Then the user's input is sent to the `GetWeatherByLocation` API, which retrieves all matching weather forecast information, including:
+  - Temperature
+  - Humidity
+  - Wind Speed
+  - A weather description
+  - The date and time of the forecast
+  - Displays all retrieved data in a structured table format for the user to view.
 
 
 ## `put your name` Razor Page Documentation  

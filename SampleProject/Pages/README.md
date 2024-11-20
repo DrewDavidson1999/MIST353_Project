@@ -1,24 +1,6 @@
 # Razor Pages and API Integration (Assignment 5) 
 **The Razor Pages can be found in the main project solution under the Pages folder. Each Razor Page is organized into its own subfolder, corresponding to the API it integrates with.**
 
-## Samantha Wilson's Razor Page Documentation  
-### Razor Page 1 - Add User
-- **Location**: `Pages/User`
-- Description: Developed a CRUD Razor Page allowing users to be added to the system. The page is accessible via the navigation bar, which provides a direct link to the "Add New User" interface.
-- Database Interaction: This page integrates with the database to insert new records, including a username, email, and hashed password for security.
-- Functionality: - Input fields for username, email, and password.
-  - Form submission validates inputs and ensures data integrity.
-  - On successful submission, new user data is stored in the database.
-  - Error handling is implemented to alert users of invalid inputs or database issues.
- 
-### Razor Page  - Add Location
-- **Location**: `Pages/Location`
-- Description: Created a CRUD Razor Page to manage locations. This page allows users to add new locations to the system through a simple, user-friendly interface accessible via the navigation bar.
-- Database Interaction: Inserts new location records into the database, including location name, address, and additional details.
-- Functionality: - Provides input fields for entering location details such as name, address, and relevant metadata.
-  - Handles form submissions by validating inputs and invoking the stored procedure.
-  - Displays error messages for incomplete or invalid entries.
-
 ## Drew Davidson's Razor Page Documentation  
 ### Razor Page 1 - Get Current Weather by City 
 - **Location**: `Pages/WeatherCurrent`
@@ -52,6 +34,24 @@
   - Weather Description: A brief summary of the expected weather conditions.
 - Once the user submits the new weather forcast, the data is sent to the `AddWeatherForecast` API, which validates and stores the forecast in the `ext_Weather_Forcasts` table in the database .
 - The page will display a success message upon successful submission of a weather forcast from a user, or an error message.
+
+## Samantha Wilson's Razor Page Documentation  
+### Razor Page 1 - Add User
+- **Location**: `Pages/User`
+- Description: Developed a CRUD Razor Page allowing users to be added to the system. The page is accessible via the navigation bar, which provides a direct link to the "Add New User" interface.
+- Database Interaction: This page integrates with the database to insert new records, including a username, email, and hashed password for security.
+- Functionality: - Input fields for username, email, and password.
+  - Form submission validates inputs and ensures data integrity.
+  - On successful submission, new user data is stored in the database.
+  - Error handling is implemented to alert users of invalid inputs or database issues.
+ 
+### Razor Page  - Add Location
+- **Location**: `Pages/Location`
+- Description: Created a CRUD Razor Page to manage locations. This page allows users to add new locations to the system through a simple, user-friendly interface accessible via the navigation bar.
+- Database Interaction: Inserts new location records into the database, including location name, address, and additional details.
+- Functionality: - Provides input fields for entering location details such as name, address, and relevant metadata.
+  - Handles form submissions by validating inputs and invoking the stored procedure.
+  - Displays error messages for incomplete or invalid entries.
 
 ## Joey Baumgart Razor Page Documentation  
 ### Razor Page 1 - Delete Location

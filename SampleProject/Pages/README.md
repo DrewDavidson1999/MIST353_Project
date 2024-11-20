@@ -1,6 +1,24 @@
 # Razor Pages and API Integration (Assignment 5) 
 **The Razor Pages can be found in the main project solution under the Pages folder. Each Razor Page is organized into its own subfolder, corresponding to the API it integrates with.**
 
+## Samantha Wilson's Razor Page Documentation  
+### Razor Page 1 - Add User
+- **Location**: `Pages/User`
+- Description: Developed a CRUD Razor Page allowing users to be added to the system. The page is accessible via the navigation bar, which provides a direct link to the "Add New User" interface.
+- Database Interaction: This page integrates with the database to insert new records, including a username, email, and hashed password for security.
+- Functionality: - Input fields for username, email, and password.
+  - Form submission validates inputs and ensures data integrity.
+  - On successful submission, new user data is stored in the database.
+  - Error handling is implemented to alert users of invalid inputs or database issues.
+ 
+### Razor Page  - Add Location
+- **Location**: `Pages/Location`
+- Description: Created a CRUD Razor Page to manage locations. This page allows users to add new locations to the system through a simple, user-friendly interface accessible via the navigation bar.
+- Database Interaction: Inserts new location records into the database, including location name, address, and additional details.
+- Functionality: - Provides input fields for entering location details such as name, address, and relevant metadata.
+  - Handles form submissions by validating inputs and invoking the stored procedure.
+  - Displays error messages for incomplete or invalid entries.
+
 ## Drew Davidson's Razor Page Documentation  
 ### Razor Page 1 - Get Current Weather by City 
 - **Location**: `Pages/WeatherCurrent`
@@ -58,7 +76,7 @@
 - Contains multiple `.cshtml` files for CRUD operations:
   - `Create.cshtml`: Allows an option for a user to create a new account for themselves
   - `Edit.cshtml`, `Details.cshtml`, `Delete.cshtml`: Supporting CRUD operation pages, that allow a user to modify their password, view it, or delete their account
-- Description: This Razor page allows users to see their account information, while having the primary function of editing their password. However, they are also able to delete and view their account information from this page.
+- Description: This Razor page allows users to see their account information while having the primary function of editing their password. However, they are also able to delete and view their account information from this page.
 - API Used: `spChangePassword` API, integrated using backend C#.
 - Database Interaction: Pulls data from the `Ext_Weather_Current` table in the `WeatherDataDB` database.
 - Functionality: Users enter a city name in the search bar on the page. Then the user's input is sent to the `GetWeatherByLocation` API, which retrieves all matching weather forecast information, including:

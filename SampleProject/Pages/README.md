@@ -78,7 +78,7 @@
   - `Edit.cshtml`, `Details.cshtml`, `Delete.cshtml`: Supporting CRUD operation pages, that allow a user to modify their password, view it, or delete their account
 - Description: This Razor page allows users to see their account information while having the primary function of editing their password. However, they are also able to delete and view their account information from this page.
 - API Used: `spChangePassword` API, integrated using backend C#.
-- Database Interaction: Pulls data from the `Ext_User` table in the `WeatherDataDB` database.
+- Database Interaction: Pulls data from the `Ext_Users` table in the `WeatherDataDB` database.
 - Functionality: Users enter into the index of users and find themselves, and go into their account and edit their password, and it then updates it in the database
   - Username
   - User Email
@@ -91,7 +91,7 @@
   - `Create.cshtml`: Allows an option for a user to create a preferred location for themselves
   - `Edit.cshtml`, `Details.cshtml`, `Delete.cshtml`: Supporting CRUD operation pages, that allow a user to modify their preferred location, delete it, or view it
 - API Used: `spChangePreferredLocation` API, integrated using backend C#.
-- Database Interaction: Pulls data from the `Ext_PreferredLocation` table in the `WeatherDataDB` database.
+- Database Interaction: Pulls data from the `Ext_UserPreferredLocations` table in the `WeatherDataDB` database.
 - Functionality: Users enter in their user id and their preferred location, and it updates it in the database.
   - User ID
   - Preferred Location

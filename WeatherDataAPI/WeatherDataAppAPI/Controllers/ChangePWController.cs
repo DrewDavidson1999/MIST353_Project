@@ -19,7 +19,7 @@ namespace WeatherDataAppAPI.Controllers
             var password = await changePW.ChangePassword(userid, passwordhash);
             if (password == null)
             {
-                // return NotFound();
+                //return NotFound();
             }
             return password;
 

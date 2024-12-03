@@ -1,6 +1,15 @@
-# Weather Data for Farmers Application (Final Project Documentation)
+# Weather for Farmers Application (Final Project Documentation)
+## **General Discription of Web Application**
+- **Overview:** The "Weather for Farmers" application is designed to provide real-time weather information and forecasts specifically tailored for farmers agricultural needs. It allows users to search for weather data by city, view detailed historical weather trends, and submit forecasts for specific regions. The application integrates APIs to fetch weather data and manage forecasts efficiently.
+- **Purpose:** To empower farmers with actionable weather data, enabling them to make informed decisions about planting, harvesting, and managing agricultural activities. By providing accurate weather information, the app aims to reduce risks associated with unpredictable weather conditions.
+- **Features:**
+  - Search for current weather conditions by city.
+  - Add and manage weather forecasts for specific regions.
+  - Add and delete user profiles.
+  - View historical weather trends. 
+  - Add and delete forcast locations. 
 
-## Deployment Guide 
+## **Deployment Guide**
 ### **Cloning the Database to SQL Server Management Studio**
 1. **Software Requirements**
    - Microsoft SQL Server (with Management Studio)
@@ -302,4 +311,28 @@ https://localhost:7085/api/WeatherByLocation/AddWeatherForecast
   - Preferred Location
   - Displays all retrieved data in a structured table format for the user to view.
 
-
+## **Developer Deocumentation**
+1. Code Consistency:
+   - Follow the existing code style and structure for Razor Pages, API controllers, and database scripts.
+   - Keep naming conventions consistent for Razor pages, models, and controllers.
+2. Error Handling:
+   - Ensure proper error handling in API methods and Razor page logic. Use descriptive error messages for debugging.
+3. Database Management:
+   - Use the SQL scripts provided in the SQL folder to recreate the database if needed.
+   - Modify stored procedures carefully to maintain compatibility with the existing APIs.
+4. Adding Features:
+   - Razor Pages: Add new Razor pages under the appropriate folder in the Pages directory.
+   - APIs: Add new API methods in existing controllers or create new controllers if needed. Ensure API documentation is updated.
+   - Database: Add new tables or procedures while maintaining the existing database schema.
+5. Testing:
+   - Test Razor pages thoroughly for both frontend functionality and backend data retrieval.
+   - Use tools like Postman to test API endpoints for expected behavior.
+6. Resources for Assistance:
+   - Project Documentation: Review the multiple README.md files in the github repository for deployment and usage instructions.
+      - Links for all `README.md` files below:
+        - https://github.com/DrewDavidson1999/MIST353_Project/blob/master/README.md
+        - https://github.com/DrewDavidson1999/MIST353_Project/blob/master/SampleProject/SQL/README.md
+        - https://github.com/DrewDavidson1999/MIST353_Project/blob/master/WeatherDataAPI/WeatherDataAppAPI/API_README.md
+        - https://github.com/DrewDavidson1999/MIST353_Project/blob/master/SampleProject/Pages/README.md
+   - Official Documentation: Refer to the official ASP.NET Core and SQL Server documentation for framework-specific guidance.
+   - GitHub Issues: Check the repository's issue tracker for existing bugs or feature requests.

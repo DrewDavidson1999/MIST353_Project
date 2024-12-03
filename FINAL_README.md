@@ -1,12 +1,12 @@
 # Weather Data for Farmers Application 
 
 ## Deployment Guide 
-### Cloning the Database to SQL Server Management Studio
+### **Cloning the Database to SQL Server Management Studio**
 1. **Software Requirements**
    - Microsoft SQL Server (with Management Studio)
    - Visual Studio 2022
    - Github (for cloneing the repository)
-2. **Cloning the Database to SQL Server Management Studio**
+2. **Cloning the Database**
    - Open a web browser and go to the GitHub repository for the application: https://github.com/DrewDavidson1999/MIST353_Project
    - Click the green "Code" button and copy the HTTPS URL (https://github.com/DrewDavidson1999/MIST353_Project.git)
 3. **Download the Repository**
@@ -30,21 +30,22 @@
    - In the Object Explorer, refresh the database.
    - Expand Tables to verify that all necessary tables (e.g., `ext_Weather_Current`, `ext_Weather_Forecasts`) are present.
    - Expand **Programmability > Stored Procedures** to ensure that stored procedures (e.g., `spGetCurrentWeatherByLocation`, `spAddWeatherForecast`) are successfully created.
-8. **Clone the Repository to Visual Studio:**
+### **Cloning the Visual Studio Code Project**
+1. **Clone the Repository:**
    - Open Visual Studio, and from the Start Window, select Clone a Repository.
    - Enter the same GitHub repository URL used in the database setup: https://github.com/DrewDavidson1999/MIST353_Project.git
    - Choose a local folder where you want the project files to be stored, and click `Clone`.
    - After cloning, Visual Studio should automatically open the solution. If not, navigate to the cloned folder, locate the solution file and double-click to open it.
-9. **Update Connection String:**
+2. **Update Connection String:**
     - In Visual Studio, open the appsettings.json file located in the root of the project.
     - Update the connection string to match your SQL Server instance. For example:
 `"ConnectionStrings": {"DefaultConnection": "Server=localhost;Database=WeatherDataDB;Trusted_Connection=True;MultipleActiveResultSets=true"}`
-10. **Restore NuGet Packages:**
+3. **Restore NuGet Packages:**
     - Go to the Tools menu and select NuGet Package Manager > Manage NuGet Packages for Solution.
     - Ensure all required packages are installed and updated.
-11. **Build and Run the Application:**
+4. **Build and Run the Application:**
     - Build the solution by selecting Build Solution from the Build menu, then click the `start` button.
-12. **Verify the Application:**
+5. **Verify the Application:**
     - The application should launch in your default web browser.
     - Navigate to different tabs from the home page such as the `Add Weather Forcast` page, and test that the API is working correctly.
 

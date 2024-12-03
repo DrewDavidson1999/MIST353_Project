@@ -240,7 +240,7 @@ https://localhost:7085/api/WeatherByLocation/AddWeatherForecast
 - Once the user submits the new weather forcast, the data is sent to the `AddWeatherForecast` API, which validates and stores the forecast in the `ext_Weather_Forcasts` table in the database .
 - The page will display a success message upon successful submission of a weather forcast from a user, or an error message.
 
-## Samantha Wilson's Razor Page Documentation  
+## 2. Samantha Wilson's Razor Page Documentation  
 ### Razor Page 1 - Add User
 - **Location**: `Pages/User`
 - Description: Developed a CRUD Razor Page allowing users to be added to the system. The page is accessible via the navigation bar, which provides a direct link to the "Add New User" interface.
@@ -258,7 +258,7 @@ https://localhost:7085/api/WeatherByLocation/AddWeatherForecast
   - Handles form submissions by validating inputs and invoking the stored procedure.
   - Displays error messages for incomplete or invalid entries.
 
-## Joey Baumgart Razor Page Documentation  
+## 3. Joey Baumgart Razor Page Documentation  
 ### Razor Page 1 - Delete Location
 - **Location**: `Pages/LDelete` 
 - Description: The Location Delete Razor page is used to delete one of the loctions from the database. The Razor page displays the locations in the database and allows you to remove the specific location.
@@ -275,7 +275,7 @@ https://localhost:7085/api/WeatherByLocation/AddWeatherForecast
 - Functionality: The users can easily delete a user from the database and can easily access the page from the home page of the application. The API also displays an error message that will let the user know if the ID does not exist.
   - UserID is used to delete all data for that datarow in the ext_User table corresponding to the UserID.
  
-## Nathan Stryker's Razor Page Documentation  
+## 4. Nathan Stryker's Razor Page Documentation  
 ### Razor Page 1 - Edit Password
 - **Location**: `Pages/Password`
 - Contains multiple `.cshtml` files for CRUD operations:

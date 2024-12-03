@@ -205,7 +205,7 @@ https://localhost:7085/api/WeatherByLocation/AddWeatherForecast
     - `DateTime`: `DateTime` - Timestamp of the recorded weather data. 
 
 ## **Razor Page Documentation**
-### Drew Davidson's Razor Page Documentation  
+### 1. Drew Davidson's Razor Page Documentation  
 ### Razor Page 1 - Get Current Weather by City 
 - **Location**: `Pages/WeatherCurrent`
 - Contains multiple `.cshtml` files for CRUD operations:
@@ -239,4 +239,9 @@ https://localhost:7085/api/WeatherByLocation/AddWeatherForecast
 - Once the user submits the new weather forcast, the data is sent to the `AddWeatherForecast` API, which validates and stores the forecast in the `ext_Weather_Forcasts` table in the database .
 - The page will display a success message upon successful submission of a weather forcast from a user, or an error message.
 
+### 2. Samantha Wilson's Razor Page Documentation 
+
+### 3. Nathan Stryker's Razor Page Documentation  
+
+### 3. Joey Baumgart's Razor Page Documentation  
 

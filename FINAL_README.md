@@ -204,6 +204,7 @@ https://localhost:7085/api/WeatherByLocation/AddWeatherForecast
     - `WeatherDescription`: `string` - Brief description of the weather.
     - `DateTime`: `DateTime` - Timestamp of the recorded weather data. 
 
+
 ## **Razor Page Documentation**
 ### 1. Drew Davidson's Razor Page Documentation  
 ### Razor Page 1 - Get Current Weather by City 
@@ -239,9 +240,66 @@ https://localhost:7085/api/WeatherByLocation/AddWeatherForecast
 - Once the user submits the new weather forcast, the data is sent to the `AddWeatherForecast` API, which validates and stores the forecast in the `ext_Weather_Forcasts` table in the database .
 - The page will display a success message upon successful submission of a weather forcast from a user, or an error message.
 
-### 2. Samantha Wilson's Razor Page Documentation 
+## Samantha Wilson's Razor Page Documentation  
+### Razor Page 1 - Add User
+- **Location**: `Pages/User`
+- Description: Developed a CRUD Razor Page allowing users to be added to the system. The page is accessible via the navigation bar, which provides a direct link to the "Add New User" interface.
+- Database Interaction: This page integrates with the database to insert new records, including a username, email, and hashed password for security.
+- Functionality: - Input fields for username, email, and password.
+  - Form submission validates inputs and ensures data integrity.
+  - On successful submission, new user data is stored in the database.
+  - Error handling is implemented to alert users of invalid inputs or database issues.
+ 
+### Razor Page  - Add Location
+- **Location**: `Pages/Location`
+- Description: Created a CRUD Razor Page to manage locations. This page allows users to add new locations to the system through a simple, user-friendly interface accessible via the navigation bar.
+- Database Interaction: Inserts new location records into the database, including location name, address, and additional details.
+- Functionality: - Provides input fields for entering location details such as name, address, and relevant metadata.
+  - Handles form submissions by validating inputs and invoking the stored procedure.
+  - Displays error messages for incomplete or invalid entries.
 
-### 3. Nathan Stryker's Razor Page Documentation  
+## Joey Baumgart Razor Page Documentation  
+### Razor Page 1 - Delete Location
+- **Location**: `Pages/LDelete` 
+- Description: The Location Delete Razor page is used to delete one of the loctions from the database. The Razor page displays the locations in the database and allows you to remove the specific location.
+- API Used: `spPreLocAdd` API
+- Database Interaction: This deletes locations by ID from the ext_Locations table in WeatherDataDB.
+- Functionality: The users can easily delete a location from the database and can easily access the page from the home page of the application. The API also displays an error message that will let the user know if the ID does not exist.
+  - LocationID is used to delete all data for that datarow in the ext_Locations table corresponding to the LocationID.
 
-### 3. Joey Baumgart's Razor Page Documentation  
+### Razor Page 2 - Delete User
+- **Location**: `Pages/UDelete` 
+- Description: The User Delete Razor page is used to delete a user from the user table in the database. The Razor page allows you to view all the users in the database and delete one of the users from the page.
+- API Used: `UDelete` API
+- Database Interaction: This deletes users by ID from the ext_User table in the WeatherDataDB.
+- Functionality: The users can easily delete a user from the database and can easily access the page from the home page of the application. The API also displays an error message that will let the user know if the ID does not exist.
+  - UserID is used to delete all data for that datarow in the ext_User table corresponding to the UserID.
+ 
+## Nathan Stryker's Razor Page Documentation  
+### Razor Page 1 - Edit Password
+- **Location**: `Pages/Password`
+- Contains multiple `.cshtml` files for CRUD operations:
+  - `Create.cshtml`: Allows an option for a user to create a new account for themselves
+  - `Edit.cshtml`, `Details.cshtml`, `Delete.cshtml`: Supporting CRUD operation pages, that allow a user to modify their password, view it, or delete their account
+- Description: This Razor page allows users to see their account information while having the primary function of editing their password. However, they are also able to delete and view their account information from this page.
+- API Used: `spChangePassword` API, integrated using backend C#.
+- Database Interaction: Pulls data from the `Ext_Users` table in the `WeatherDataDB` database.
+- Functionality: Users enter into the index of users and find themselves, and go into their account and edit their password, and it then updates it in the database
+  - Username
+  - User Email
+  - Password
+  - Displays all retrieved data in a structured table format for the user to view.
+
+### Razor Page 2 - Edit Preferred Location
+- **Location**: `Pages/PreferredLocUpdate`
+- Contains multiple `.cshtml` files for CRUD operations:
+  - `Create.cshtml`: Allows an option for a user to create a preferred location for themselves
+  - `Edit.cshtml`, `Details.cshtml`, `Delete.cshtml`: Supporting CRUD operation pages, that allow a user to modify their preferred location, delete it, or view it
+- API Used: `spChangePreferredLocation` API, integrated using backend C#.
+- Database Interaction: Pulls data from the `Ext_UserPreferredLocations` table in the `WeatherDataDB` database.
+- Functionality: Users enter in their user id and their preferred location, and it updates it in the database.
+  - User ID
+  - Preferred Location
+  - Displays all retrieved data in a structured table format for the user to view.
+
 

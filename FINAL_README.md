@@ -79,8 +79,9 @@
    - Post questions or search for similar issues: https://stackoverflow.com/
 5. *W3 Schools*
    - Visit https://www.w3schools.com/ for any other questions or errors. 
+
 ## **API Documentation** 
-## **Drew Davidson APIs**
+### **Drew Davidson APIs**
 ### 1. GetWeatherByLocation API
 #### Purpose:
 The **GetWeatherByLocation** API allows users to retrieve the current weather data for a specified city. This API pulls weather data from the `ext_Weather_Current` table from the WeatherDataDB based on the city input. This Web APi provides detailed weather information to users of the web application.
@@ -202,6 +203,8 @@ https://localhost:7085/api/WeatherByLocation/AddWeatherForecast
     - `WindSpeed`: `double` - Wind speed.
     - `WeatherDescription`: `string` - Brief description of the weather.
     - `DateTime`: `DateTime` - Timestamp of the recorded weather data. 
+
+## **Razor Page Documentation**
 ### Drew Davidson's Razor Page Documentation  
 ### Razor Page 1 - Get Current Weather by City 
 - **Location**: `Pages/WeatherCurrent`

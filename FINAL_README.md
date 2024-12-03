@@ -1,4 +1,4 @@
-# Weather Data for Farmers Application 
+# Weather Data for Farmers Application (Final Project Documentation)
 
 ## Deployment Guide 
 ### **Cloning the Database to SQL Server Management Studio**

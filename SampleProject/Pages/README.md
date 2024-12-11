@@ -56,7 +56,7 @@
 ## Joey Baumgart Razor Page Documentation  
 ### Razor Page 1 - Delete Location
 - **Location**: `Pages/LDelete` 
-- Description: The Location Delete Razor page is used to delete one of the loctions from the database. The Razor page displays the locations in the database and allows you to remove the specific location.
+- Description: The Location Delete Razor page is used to delete one of the locations from the database. The Razor page displays the locations in the database and allows you to remove the specific location.
 - API Used: `spPreLocAdd` API
 - Database Interaction: This deletes locations by ID from the ext_Locations table in WeatherDataDB.
 - Functionality: The users can easily delete a location from the database and can easily access the page from the home page of the application. The API also displays an error message that will let the user know if the ID does not exist.

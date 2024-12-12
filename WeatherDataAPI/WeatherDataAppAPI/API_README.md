@@ -309,7 +309,7 @@ curl -X 'DELETE' \
 ```
 ### Example Request URL:
 ```
-https://localhost:7085/api/UDelete/
+https://localhost:7085/api/UDelete/8
 ```
 ### Outputs:
 #### Success (200 OK):

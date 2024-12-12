@@ -316,7 +316,7 @@ https://localhost:7085/api/UDelete/8
 ```
   [
   {
-    "locationID": 8
+    "userID": 8
   }
 ]
 ```

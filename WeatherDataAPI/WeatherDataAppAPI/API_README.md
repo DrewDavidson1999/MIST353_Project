@@ -304,19 +304,19 @@ The **GetWeatherDelete** API deletes a location by primary key from the _extLoca
 ### Example Curl Request:
 ```
 curl -X 'DELETE' \
-  'https://localhost:7085/api/WeatherDataDelete/99' \
+  'https://localhost:7085/api/UDelete/8' \
   -H 'accept: text/plain'
 ```
 ### Example Request URL:
 ```
-https://localhost:7085/api/WeatherDataDelete/99
+https://localhost:7085/api/UDelete/
 ```
 ### Outputs:
 #### Success (200 OK):
 ```
   [
   {
-    "locationID": 99
+    "locationID": 8
   }
 ]
 ```
